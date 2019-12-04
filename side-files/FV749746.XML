@@ -1,0 +1,1496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="#"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ksx="http://www.ks-ewd.pl/osoz-edi" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<xsl:output encoding="utf-8" indent="no" method="html"/>
+<dokumenty xmlns="http://www.ks-ewd.pl/osoz-edi">
+  <info>
+    <wersja>2012.01.0.0</wersja>
+    <copyright>Wszelkie prawa dotyczące formatu OSOZ-EDI są zastrzeżone przez KAMSOFT SA Korzystanie z formatu OSOZ-EDI wymaga rejestracji na Portalu KS-EWD oraz spełnienia warunków określonych na stronie www.ks-ewd.pl/osoz-edi.</copyright>
+    <data-utworzenia>2019-11-28T22:57:00</data-utworzenia>
+  </info>
+  <kontrahenci>
+    <kontrahent>
+      <id-knt>1143</id-knt>
+      <id-knt-ks>869150</id-knt-ks>
+      <nazwa>NEUCA SA</nazwa>
+      <miejscowosc>ul. Szosa Bydgoska 58</miejscowosc>
+      <ulica>87-100 Toruń</ulica>
+      <nip>879-00-17-162</nip>
+      <zezwolenie>GIF-N-4111/22/AR/10 z 15.03.2010r.</zezwolenie>
+      <regon>870227804</regon>
+    </kontrahent>
+    <kontrahent>
+      <id-knt>169532</id-knt>
+      <nazwa>DZIAŁ FARMACJI SZPITALNEJ DZIAŁ FARMACJI SZPITALNEJ </nazwa>
+      <nip>6760078896</nip>
+      <kod-pocztowy>31-513</kod-pocztowy>
+      <miejscowosc>KRAKÓW</miejscowosc>
+      <ulica>OLSZAŃSKA 5</ulica>
+    </kontrahent>
+  </kontrahenci>
+  <towary>
+    <towar>
+      <id-towaru>44165</id-towaru>
+      <nazwa>ABSENOR 300MG * 100 TABL</nazwa>
+      <id-towaru-ks>8372701</id-towaru-ks>  <!---- BOLZ --->
+    </towar>
+    <towar>
+      <id-towaru>87170</id-towaru>
+      <nazwa>AMYLAN 875MG+125MG*14 TABL.POWL.</nazwa>
+      <id-towaru-ks>3206371</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>76751</id-towaru>
+      <nazwa>ATORVASTATIN GENOPTIM 20MG*30 TABL.POWL</nazwa>
+      <id-towaru-ks>8878226</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>75039</id-towaru>
+      <nazwa>CETIRIZINE GENOPTIM 10MG*30 TABL.POWL</nazwa>
+      <id-towaru-ks>8961002</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>23163</id-towaru>
+      <nazwa>LOPERAMID WZF 2MG * 30 TABL.   /POLFA WA</nazwa>
+      <id-towaru-ks>4767503</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>70318</id-towaru>
+      <nazwa>POLPRIL  2,5MG * 28 TABL</nazwa>
+      <id-towaru-ks>8366051</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>98002</id-towaru>
+      <nazwa>SERTRALINE AUROVITAS 100MG*30 TABL.POWL</nazwa>
+      <id-towaru-ks>3415223</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>82979</id-towaru>
+      <nazwa>TRAVOPROST GENOPTIM 40MCG/ML 2,5ML</nazwa>
+      <id-towaru-ks>3056121</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>1462</id-towaru>
+      <nazwa>VIT.B12 INJ 1000MCG/2ML * 5 AMP.</nazwa>
+      <id-towaru-ks>4101401</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>30476</id-towaru>
+      <nazwa>APHTIN 10G PLYN                  FARMINA</nazwa>
+      <id-towaru-ks>4739301</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>77971</id-towaru>
+      <nazwa>BETO  25 ZK * 30 TABL.</nazwa>
+      <id-towaru-ks>3029142</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>70165</id-towaru>
+      <nazwa>BIBLOC  7,5MG*30 TABL.POWL.</nazwa>
+      <id-towaru-ks>8553641</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>86024</id-towaru>
+      <nazwa>BICARDIOL   2,5MG*30 TABL.POWL.</nazwa>
+      <id-towaru-ks>3167933</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>1469</id-towaru>
+      <nazwa>BUTAPIRAZOL  5 % MASC 30G</nazwa>
+      <id-towaru-ks>4278701</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>10310</id-towaru>
+      <nazwa>DEKSTRAN 40.000J 500ML 10% LZ  FRESENIUS</nazwa>
+      <id-towaru-ks>3155501</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>82447</id-towaru>
+      <nazwa>GLUCOSUM  5% 500ML KABICLEAR Z KAPSLEM</nazwa>
+      <id-towaru-ks>8939402</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>44163</id-towaru>
+      <nazwa>NATR.CHLOR.0,9%  500ML   KABI PAC</nazwa>
+      <id-towaru-ks>6332701</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>65012</id-towaru>
+      <nazwa>NO-SPA  40MG * 40 TABL</nazwa>
+      <id-towaru-ks>6723703</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>29049</id-towaru>
+      <nazwa>NO-SPA INJ.0,04G/2ML * 5 AMP.    /SANOFI</nazwa>
+      <id-towaru-ks>4129901</id-towaru-ks>
+    </towar>
+    <towar>
+      <id-towaru>225</id-towaru>
+      <nazwa>SULFACETAMID NATR.10% 0,5ML*12MINIM.</nazwa>
+      <id-towaru-ks>4343401</id-towaru-ks>
+    </towar>
+  </towary>
+  <konfiguracja>
+  	<dostawca>
+  		<id-knt>1143</id-knt>
+  		<haslo-zrodlo>F</haslo-zrodlo>
+  	</dostawca>
+  </konfiguracja>
+  <faktury>
+    <faktura>
+      <naglowek>
+        <data-wystawienia>2019-11-28T00:00:00</data-wystawienia>
+        <data-sprzedazy>2019-11-28</data-sprzedazy>
+        <termin-platnosci>2019-12-28</termin-platnosci>
+        <forma-platnosci>Przelew</forma-platnosci>
+        <id-knt-sprzedawcy>1143</id-knt-sprzedawcy>
+        <id-knt-nabywcy>169532</id-knt-nabywcy>
+        <nr-faktury>1574749746</nr-faktury>
+        <id-faktury>574749746</id-faktury>
+        <czy-korekta>N</czy-korekta>
+        <liczba-poz>21</liczba-poz>
+        <wartosc-netto>690.06</wartosc-netto>
+        <wartosc-vat>55.20</wartosc-vat>
+        <wartosc-brutto>745.26</wartosc-brutto>
+        <wartosc-brutto-slownie>siedemset czterdzieści pięć zł dwadzieścia sześć gr</wartosc-brutto-slownie>
+        <id-hrt-p2>103562</id-hrt-p2>
+      </naglowek>
+      <pozycje>
+        <pozycja>
+          <id-poz-faktury>160</id-poz-faktury>
+          <nr-poz-faktury>1</nr-poz-faktury>
+          <id-towaru>44165</id-towaru>
+          <cena-netto-bu>28.35</cena-netto-bu>
+          <cena-netto>28.35</cena-netto>
+          <wartosc-netto>28.35</wartosc-netto>
+          <cena-brutto-bu>30.62</cena-brutto-bu>
+          <cena-brutto>30.62</cena-brutto>
+          <wartosc-brutto>30.62</wartosc-brutto>
+          <rodzaj-ceny>B</rodzaj-ceny>
+          <ilosc>1</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>41.83</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2022-04-30</data-waznosci>
+          <seria>1918448</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909990042371</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>60</id-poz-faktury>
+          <nr-poz-faktury>2</nr-poz-faktury>
+          <id-towaru>87170</id-towaru>
+          <cena-netto-bu>16.80</cena-netto-bu>
+          <cena-netto>16.80</cena-netto>
+          <wartosc-netto>33.59</wartosc-netto>
+          <cena-brutto-bu>18.14</cena-brutto-bu>
+          <cena-brutto>18.14</cena-brutto>
+          <wartosc-brutto>36.28</wartosc-brutto>
+          <rodzaj-ceny>B</rodzaj-ceny>
+          <ilosc>2</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>23.94</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2020-12-31</data-waznosci>
+          <seria>9MYP24</seria>
+          <pkwiu></pkwiu>
+          <kod-kreskowy>5909991284237</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>120</id-poz-faktury>
+          <nr-poz-faktury>3</nr-poz-faktury>
+          <id-towaru>76751</id-towaru>
+          <cena-netto-bu>3.48</cena-netto-bu>
+          <cena-netto>3.48</cena-netto>
+          <wartosc-netto>13.93</wartosc-netto>
+          <cena-brutto-bu>3.76</cena-brutto-bu>
+          <cena-brutto>3.76</cena-brutto>
+          <wartosc-brutto>15.04</wartosc-brutto>
+          <rodzaj-ceny>B</rodzaj-ceny>
+          <ilosc>4</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>9.47</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2020-09-30</data-waznosci>
+          <seria>10257</seria>
+          <pkwiu></pkwiu>
+          <kod-kreskowy>5909990899920</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>40</id-poz-faktury>
+          <nr-poz-faktury>4</nr-poz-faktury>
+          <id-towaru>75039</id-towaru>
+          <cena-netto-bu>2.65</cena-netto-bu>
+          <cena-netto>2.65</cena-netto>
+          <wartosc-netto>7.94</wartosc-netto>
+          <cena-brutto-bu>2.86</cena-brutto-bu>
+          <cena-brutto>2.86</cena-brutto>
+          <wartosc-brutto>8.58</wartosc-brutto>
+          <rodzaj-ceny>B</rodzaj-ceny>
+          <ilosc>3</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>12.64</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2020-05-31</data-waznosci>
+          <seria>GNT027001</seria>
+          <pkwiu></pkwiu>
+          <kod-kreskowy>5909990969739</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>70</id-poz-faktury>
+          <nr-poz-faktury>5</nr-poz-faktury>
+          <id-towaru>23163</id-towaru>
+          <cena-netto-bu>5.02</cena-netto-bu>
+          <cena-netto>5.02</cena-netto>
+          <wartosc-netto>50.19</wartosc-netto>
+          <cena-brutto-bu>5.42</cena-brutto-bu>
+          <cena-brutto>5.42</cena-brutto>
+          <wartosc-brutto>54.20</wartosc-brutto>
+          <rodzaj-ceny>B</rodzaj-ceny>
+          <ilosc>10</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>7.55</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2022-06-30</data-waznosci>
+          <seria>08LH0619</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909990038220</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>140</id-poz-faktury>
+          <nr-poz-faktury>6</nr-poz-faktury>
+          <id-towaru>70318</id-towaru>
+          <cena-netto-bu>2.85</cena-netto-bu>
+          <cena-netto>2.85</cena-netto>
+          <wartosc-netto>5.70</wartosc-netto>
+          <cena-brutto-bu>3.08</cena-brutto-bu>
+          <cena-brutto>3.08</cena-brutto>
+          <wartosc-brutto>6.16</wartosc-brutto>
+          <rodzaj-ceny>B</rodzaj-ceny>
+          <ilosc>2</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>5.38</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2021-06-30</data-waznosci>
+          <seria>F89572</seria>
+          <pkwiu></pkwiu>
+          <kod-kreskowy>5909990924608</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>130</id-poz-faktury>
+          <nr-poz-faktury>7</nr-poz-faktury>
+          <id-towaru>98002</id-towaru>
+          <cena-netto-bu>14.03</cena-netto-bu>
+          <cena-netto>14.03</cena-netto>
+          <wartosc-netto>28.06</wartosc-netto>
+          <cena-brutto-bu>15.15</cena-brutto-bu>
+          <cena-brutto>15.15</cena-brutto>
+          <wartosc-brutto>30.30</wartosc-brutto>
+          <rodzaj-ceny>B</rodzaj-ceny>
+          <ilosc>2</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>20.51</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2023-01-31</data-waznosci>
+          <seria>SZ1019027-A</seria>
+          <pkwiu></pkwiu>
+          <kod-kreskowy>5909991355739</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>200</id-poz-faktury>
+          <nr-poz-faktury>8</nr-poz-faktury>
+          <id-towaru>82979</id-towaru>
+          <cena-netto-bu>14.00</cena-netto-bu>
+          <cena-netto>14.00</cena-netto>
+          <wartosc-netto>28.00</wartosc-netto>
+          <cena-brutto-bu>15.12</cena-brutto-bu>
+          <cena-brutto>15.12</cena-brutto>
+          <wartosc-brutto>30.24</wartosc-brutto>
+          <rodzaj-ceny>B</rodzaj-ceny>
+          <ilosc>2</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>35.62</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2022-06-30</data-waznosci>
+          <seria>08239</seria>
+          <pkwiu></pkwiu>
+          <kod-kreskowy>5909991197629</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>10</id-poz-faktury>
+          <nr-poz-faktury>9</nr-poz-faktury>
+          <id-towaru>1462</id-towaru>
+          <cena-netto-bu>5.47</cena-netto-bu>
+          <cena-netto>5.47</cena-netto>
+          <wartosc-netto>10.93</wartosc-netto>
+          <cena-brutto-bu>5.90</cena-brutto-bu>
+          <cena-brutto>5.90</cena-brutto>
+          <wartosc-brutto>11.80</wartosc-brutto>
+          <rodzaj-ceny>B</rodzaj-ceny>
+          <ilosc>2</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>8.24</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2022-09-30</data-waznosci>
+          <seria>02CX0919</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909990244010</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>50</id-poz-faktury>
+          <nr-poz-faktury>10</nr-poz-faktury>
+          <id-towaru>30476</id-towaru>
+          <cena-netto-bu>1.00</cena-netto-bu>
+          <cena-netto>1.00</cena-netto>
+          <wartosc-netto>10.00</wartosc-netto>
+          <cena-brutto-bu>1.08</cena-brutto-bu>
+          <cena-brutto>1.08</cena-brutto>
+          <wartosc-brutto>10.80</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>10</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>2.15</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2021-09-30</data-waznosci>
+          <seria>99032</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909990269815</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>110</id-poz-faktury>
+          <nr-poz-faktury>11</nr-poz-faktury>
+          <id-towaru>77971</id-towaru>
+          <cena-netto-bu>9.63</cena-netto-bu>
+          <cena-netto>9.63</cena-netto>
+          <wartosc-netto>38.52</wartosc-netto>
+          <cena-brutto-bu>10.40</cena-brutto-bu>
+          <cena-brutto>10.40</cena-brutto>
+          <wartosc-brutto>41.60</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>4</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>15.61</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2021-02-28</data-waznosci>
+          <seria>KC6753</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5907626702668</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>170</id-poz-faktury>
+          <nr-poz-faktury>12</nr-poz-faktury>
+          <id-towaru>70165</id-towaru>
+          <cena-netto-bu>11.93</cena-netto-bu>
+          <cena-netto>11.93</cena-netto>
+          <wartosc-netto>11.93</wartosc-netto>
+          <cena-brutto-bu>12.88</cena-brutto-bu>
+          <cena-brutto>12.88</cena-brutto>
+          <wartosc-brutto>12.88</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>1</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>16.10</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2024-04-30</data-waznosci>
+          <seria>JU5202</seria>
+          <pkwiu></pkwiu>
+          <kod-kreskowy>5909990694181</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>190</id-poz-faktury>
+          <nr-poz-faktury>13</nr-poz-faktury>
+          <id-towaru>86024</id-towaru>
+          <cena-netto-bu>1.45</cena-netto-bu>
+          <cena-netto>1.45</cena-netto>
+          <wartosc-netto>4.35</wartosc-netto>
+          <cena-brutto-bu>1.57</cena-brutto-bu>
+          <cena-brutto>1.57</cena-brutto>
+          <wartosc-brutto>4.70</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>3</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>3.60</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2021-10-31</data-waznosci>
+          <seria>PX05858</seria>
+          <pkwiu></pkwiu>
+          <kod-kreskowy>5909991259433</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>100</id-poz-faktury>
+          <nr-poz-faktury>14</nr-poz-faktury>
+          <id-towaru>1469</id-towaru>
+          <cena-netto-bu>17.03</cena-netto-bu>
+          <cena-netto>17.03</cena-netto>
+          <wartosc-netto>68.12</wartosc-netto>
+          <cena-brutto-bu>18.39</cena-brutto-bu>
+          <cena-brutto>18.39</cena-brutto>
+          <wartosc-brutto>73.57</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>4</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>27.73</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2022-04-30</data-waznosci>
+          <seria>PX3R</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909990142910</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>90</id-poz-faktury>
+          <nr-poz-faktury>15</nr-poz-faktury>
+          <id-towaru>10310</id-towaru>
+          <cena-netto-bu>34.21</cena-netto-bu>
+          <cena-netto>34.21</cena-netto>
+          <wartosc-netto>102.63</wartosc-netto>
+          <cena-brutto-bu>36.95</cena-brutto-bu>
+          <cena-brutto>36.95</cena-brutto>
+          <wartosc-brutto>110.85</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>3</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>63.95</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2021-06-30</data-waznosci>
+          <seria>19KG13GA</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909990212729</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>30</id-poz-faktury>
+          <nr-poz-faktury>16</nr-poz-faktury>
+          <id-towaru>82447</id-towaru>
+          <cena-netto-bu>4.37</cena-netto-bu>
+          <cena-netto>4.37</cena-netto>
+          <wartosc-netto>87.40</wartosc-netto>
+          <cena-brutto-bu>4.72</cena-brutto-bu>
+          <cena-brutto>4.72</cena-brutto>
+          <wartosc-brutto>94.39</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>20</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>8.14</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2022-07-31</data-waznosci>
+          <seria>15NH708Y1</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909991030735</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>20</id-poz-faktury>
+          <nr-poz-faktury>17</nr-poz-faktury>
+          <id-towaru>44163</id-towaru>
+          <cena-netto-bu>3.83</cena-netto-bu>
+          <cena-netto>3.83</cena-netto>
+          <wartosc-netto>76.60</wartosc-netto>
+          <cena-brutto-bu>4.14</cena-brutto-bu>
+          <cena-brutto>4.14</cena-brutto>
+          <wartosc-brutto>82.73</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>20</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>7.26</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2022-08-31</data-waznosci>
+          <seria>15NID250</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909990251087</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>150</id-poz-faktury>
+          <nr-poz-faktury>18</nr-poz-faktury>
+          <id-towaru>65012</id-towaru>
+          <cena-netto-bu>12.40</cena-netto-bu>
+          <cena-netto>12.40</cena-netto>
+          <wartosc-netto>24.80</wartosc-netto>
+          <cena-brutto-bu>13.39</cena-brutto-bu>
+          <cena-brutto>13.39</cena-brutto>
+          <wartosc-brutto>26.78</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>2</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>21.40</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2022-07-31</data-waznosci>
+          <seria>CRL2XC</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909990857753</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>180</id-poz-faktury>
+          <nr-poz-faktury>19</nr-poz-faktury>
+          <id-towaru>29049</id-towaru>
+          <cena-netto-bu>5.87</cena-netto-bu>
+          <cena-netto>5.87</cena-netto>
+          <wartosc-netto>11.74</wartosc-netto>
+          <cena-brutto-bu>6.34</cena-brutto-bu>
+          <cena-brutto>6.34</cena-brutto>
+          <wartosc-brutto>12.68</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>2</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>9.75</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2022-06-30</data-waznosci>
+          <seria>CCG89A</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909990030712</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>81</id-poz-faktury>
+          <nr-poz-faktury>20</nr-poz-faktury>
+          <id-towaru>225</id-towaru>
+          <cena-netto-bu>7.88</cena-netto-bu>
+          <cena-netto>7.88</cena-netto>
+          <wartosc-netto>15.76</wartosc-netto>
+          <cena-brutto-bu>8.51</cena-brutto-bu>
+          <cena-brutto>8.51</cena-brutto>
+          <wartosc-brutto>17.02</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>2</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>13.02</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2021-08-31</data-waznosci>
+          <seria>10819</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909990034710</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+        <pozycja>
+          <id-poz-faktury>82</id-poz-faktury>
+          <nr-poz-faktury>21</nr-poz-faktury>
+          <id-towaru>225</id-towaru>
+          <cena-netto-bu>7.88</cena-netto-bu>
+          <cena-netto>7.88</cena-netto>
+          <wartosc-netto>31.52</wartosc-netto>
+          <cena-brutto-bu>8.51</cena-brutto-bu>
+          <cena-brutto>8.51</cena-brutto>
+          <wartosc-brutto>34.04</wartosc-brutto>
+          <rodzaj-ceny>N</rodzaj-ceny>
+          <ilosc>4</ilosc>
+          <stawka-vat>8</stawka-vat>
+          <cena-detal-brutto>13.02</cena-detal-brutto>
+          <upust></upust>
+          <data-waznosci>2021-08-31</data-waznosci>
+          <seria>10819</seria>
+          <pkwiu>2120130</pkwiu>
+          <kod-kreskowy>5909990034710</kod-kreskowy>
+          <nr-rezerwacji></nr-rezerwacji>
+          <jednostka-miary>OP</jednostka-miary>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+      </pozycje>
+      <podsumowanie>
+        <stawki>
+          <stawka>
+            <stawka-vat>8</stawka-vat>
+            <wartosc-netto>690.06</wartosc-netto>
+            <wartosc-vat>55.20</wartosc-vat>
+            <wartosc-brutto>745.26</wartosc-brutto>
+          </stawka>
+        </stawki>
+      </podsumowanie>
+    </faktura>
+  </faktury>
+</dokumenty>
+  <xsl:template match="xsl:stylesheet">
+    <xsl:apply-templates select="ksx:dokumenty"/>
+  </xsl:template>
+  <xsl:template match="ksx:dokumenty">
+    <html>
+      <head>
+        <style media="all" type="text/css">
+          * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, sans-serif;
+          }
+          table.hidden {
+            border: none 0;
+            padding: 2px;
+            margin: 5px;
+          }
+          table.hidden td, table.hidden th {
+            padding: 1px;
+            font-size: 11px;
+            vertical-align: top;
+          }
+          table.data {
+            margin: 10px 0;
+            border-collapse: collapse;
+          }
+          table.data td, table.data th {
+            border: 1px solid #999;
+            padding: 3px;
+            font-size: 10px;
+            vertical-align: middle;
+          }
+          table td.header {
+            background: #aaa;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+          }
+          table td.position {
+            font-size: 10px;
+          }
+          .tal { text-align: left; }
+          .tar { text-align: right; }
+          .tac { text-align: center}
+          .bold { font-weight: bold; }
+           h1{
+            font-size: 16px;
+            font-weight: bold;
+            color: #666;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            letter-spacing: 0px;
+            border-bottom: 1px solid #999;
+          }
+          h2 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #999;
+          }
+          p {
+            font-size: 10px;
+            margin-bottom: 5px;
+          }
+        </style>
+      </head>
+      <body>
+        <xsl:apply-templates select="ksx:faktury" />
+        <xsl:apply-templates select="ds:Signature"/>
+      </body>
+    </html>
+  </xsl:template>
+
+  <xsl:template match="ksx:faktury">
+    <xsl:for-each select="ksx:faktura">
+      <table class="hidden" width="90%">
+        <tr>
+          <td>
+            <table class="hidden" width="100%">
+
+
+              <xsl:if test="//ksx:dokumenty/ksx:info/ksx:komentarz != ''">
+                <tr>
+                  <td colspan="4" style="text-align:center; color:red;">
+                    <xsl:value-of select="//ksx:dokumenty/ksx:info/ksx:komentarz" />
+                    <xsl:if test="//ksx:dokumenty/ksx:info/ksx:data-utworzenia != ''">
+             utworzony <xsl:call-template name="format-date">
+                        <xsl:with-param name="date" select="//ksx:dokumenty/ksx:info/ksx:data-utworzenia" />
+                      </xsl:call-template>
+                    </xsl:if>
+                    <br/>
+                    <br/>
+                  </td>
+                </tr>
+              </xsl:if>
+
+
+              <tr>
+                <td colspan="4">
+                  <h1 class="bold">
+
+
+
+                    <xsl:choose>
+                      <xsl:when test="ksx:naglowek/ksx:tytul-faktury != ''">
+                        <xsl:value-of select="ksx:naglowek/ksx:tytul-faktury" />
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:choose>
+                          <xsl:when test="ksx:naglowek/ksx:rodzaj-faktury != ''">
+                            <xsl:if test="ksx:naglowek/ksx:rodzaj-faktury = 'FV'">FAKTURA VAT</xsl:if>
+                            <xsl:if test="ksx:naglowek/ksx:rodzaj-faktury = 'KV'">KOREKTA FAKTURY VAT</xsl:if>
+                            <xsl:if test="ksx:naglowek/ksx:rodzaj-faktury = 'SV'">SAMOROZLICZALNA FAKTURA VAT</xsl:if>
+                            <xsl:if test="ksx:naglowek/ksx:rodzaj-faktury = 'MM'">PRZESUNIĘCIE MIĘDZYMAGAZYNOWE</xsl:if>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:choose>
+                              <xsl:when test="substring(ksx:naglowek/ksx:czy-korekta, 1, 1) = 'T'">
+                      KOREKTA FAKTURY VAT
+                              </xsl:when>
+                              <xsl:otherwise>
+                      FAKTURA VAT
+                              </xsl:otherwise>
+                            </xsl:choose>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                      </xsl:otherwise>
+                    </xsl:choose>
+
+
+
+
+                    NR <xsl:value-of select="ksx:naglowek/ksx:nr-faktury" />
+                  </h1>
+                  <table class="hidden" width="100%">
+                    <tr>
+                      <td class="tar" style="width: 120px;">Data wystawienia:</td>
+                      <td class="tal bold" style="width: 150px;">
+                        <xsl:call-template name="format-date">
+                          <xsl:with-param name="date" select="ksx:naglowek/ksx:data-wystawienia" />
+                        </xsl:call-template>
+                      </td>
+                      <xsl:choose>
+                        <xsl:when test="substring(ksx:naglowek/ksx:czy-korekta, 1, 1) = 'T'">
+                          <td class="tar"  style="width: 150px;">Nr faktury VAT oryg.:</td>
+                          <td class="tal bold">
+                            <xsl:value-of select="ksx:naglowek/ksx:nr-faktury-oryginalu" />
+                          </td>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <td class="tar"/>
+                          <td class="tal bold"/>
+                        </xsl:otherwise>
+                      </xsl:choose>
+                      <td rowspan="5" class="tar">
+                        <span style="font-size: 30px; font-family: Code39; text-align:right;">
+              *96<xsl:variable name="kod" select="//ksx:dokumenty/ksx:kontrahenci/ksx:kontrahent[ksx:id-knt=current()/ksx:naglowek/ksx:id-knt-sprzedawcy]"/>
+                          <xsl:value-of select="$kod/ksx:id-knt-ks" />
+                          <xsl:value-of select="format-number(ksx:naglowek/ksx:id-faktury, '0000000000')" />1* </span>
+                        <!-- <br/>
+              <span style="font-size: 7px; text-align:right;"><xsl:value-of select="ksx:naglowek/ksx:id-faktury" /></span> -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tar">Data sprzedaży:</td>
+                      <td class="tal bold">
+                        <xsl:value-of select="ksx:naglowek/ksx:data-sprzedazy" />
+                      </td>
+                      <xsl:choose>
+                        <xsl:when test="substring(ksx:naglowek/ksx:czy-korekta, 1, 1) = 'T'">
+                          <td class="tar">Podstawa korekty:</td>
+                          <td class="tal bold">
+                            <xsl:value-of select="ksx:naglowek/ksx:podstawa-korekty" />
+                          </td>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <td class="tar"/>
+                          <td class="tal bold"/>
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </tr>
+                    <tr>
+                      <td class="tar">Termin płatności:</td>
+                      <td class="tal bold" style="color:red;">
+                        <xsl:value-of select="ksx:naglowek/ksx:termin-platnosci" />
+                      </td>
+                      <td class="tar"/>
+                      <td class="tal bold"/>
+                    </tr>
+                    <tr>
+                      <td class="tar">Forma płatności:</td>
+                      <td class="tal bold" style="color:red;">
+                        <xsl:value-of select="ksx:naglowek/ksx:forma-platnosci" />
+                      </td>
+                      <td class="tar"/>
+                      <td class="tal bold"/>
+                    </tr>
+                    <tr>
+                      <td class="tar">Uwagi:</td>
+                      <td class="tal bold" style="width: 300px;">
+                        <xsl:value-of select="ksx:naglowek/ksx:uwagi" />
+                      </td>
+                      <td class="tar"/>
+                      <td class="tal bold"/>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 25%">
+                  <h2>Sprzedawca</h2>
+                  <xsl:variable name="sprzedawca" select="//ksx:dokumenty/ksx:kontrahenci/ksx:kontrahent[ksx:id-knt=current()/ksx:naglowek/ksx:id-knt-sprzedawcy]"/>
+                  <table class="hidden" width="100%" style="line-height:15px;">
+                    <tr>
+                      <td>
+                        <xsl:call-template name="format-dostawca">
+                          <xsl:with-param name="kontrahent" select="$sprzedawca" />
+                        </xsl:call-template>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <xsl:if test="ksx:naglowek/ksx:id-knt-wysylajacego != ''">
+                  <td style="width: 25%">
+                    <h2>Wysyłający</h2>
+                    <xsl:variable name="wysylajacy" select="//ksx:dokumenty/ksx:kontrahenci/ksx:kontrahent[ksx:id-knt=current()/ksx:naglowek/ksx:id-knt-wysylajacego]"/>
+                    <table class="hidden" width="100%" style="line-height:15px;">
+                      <tr>
+                        <td>
+                          <xsl:call-template name="format-dostawca">
+                            <xsl:with-param name="kontrahent" select="$wysylajacy" />
+                          </xsl:call-template>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </xsl:if>
+                <td style="width: 25%">
+                  <h2>Nabywca</h2>
+                  <xsl:variable name="nabywca" select="//ksx:dokumenty/ksx:kontrahenci/ksx:kontrahent[ksx:id-knt=current()/ksx:naglowek/ksx:id-knt-nabywcy]"/>
+                  <table class="hidden" width="100%" style="line-height:15px;">
+                    <tr>
+                      <td>
+                        <xsl:call-template name="format-odbiorca">
+                          <xsl:with-param name="kontrahent" select="$nabywca" />
+                        </xsl:call-template>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <xsl:if test="ksx:naglowek/ksx:id-knt-odbiorcy != ''">
+                  <td style="width: 25%">
+                    <h2>Odbiorca</h2>
+                    <xsl:variable name="odbiorca" select="//ksx:dokumenty/ksx:kontrahenci/ksx:kontrahent[ksx:id-knt=current()/ksx:naglowek/ksx:id-knt-odbiorcy]"/>
+                    <table class="hidden" width="100%" style="line-height:15px;">
+                      <tr>
+                        <td>
+                          <xsl:call-template name="format-odbiorca">
+                            <xsl:with-param name="kontrahent" select="$odbiorca" />
+                          </xsl:call-template>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </xsl:if>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+
+            <xsl:if test="substring(ksx:naglowek/ksx:czy-korekta, 1, 1) = 'T'">
+              <br/>
+              <b>Było:</b>
+              <table class="data" width="100%">
+                <tr>
+                  <td class="header" style="width: 20px;">Lp.</td>
+                  <td class="header">Nazwa towaru<br />Kod BLOZ<br />Producent, kraj</td>
+                  <td class="header">Ilość</td>
+                  <td class="header">Jednostka<br/>miary</td>
+                  <td class="header">Seria<br />Data ważności</td>
+                  <td class="header">Atest<br />Data atestu</td>
+                  <td class="header">Cena netto<br />Wartość netto</td>
+                  <td class="header">%VAT<br />Wartość VAT</td>
+                  <td class="header">Cena brutto<br />Wartość brutto</td>
+                  <td class="header">Upust w %</td>
+                  <td class="header">Cena netto przed upustem<br />Cena brutto przed upustem</td>
+                  <td class="header">PKWiU</td>
+                  <td class="header">Cena detaliczna brutto</td>
+                </tr>
+					<xsl:variable name="przyczynaKorekty" select="ksx:naglowek/ksx:podstawa-korekty" />
+                <xsl:for-each select="ksx:pozycje/ksx:pozycja">
+				   <xsl:if test="$przyczynaKorekty != 'KOREKTA SERII' or current()/ksx:ilosc-przed-kor != 0">
+                  <xsl:variable name="towar" select="//ksx:dokumenty/ksx:towary/ksx:towar[ksx:id-towaru=current()/ksx:id-towaru]"/>
+<xsl:variable name = "lp">
+<xsl:choose>
+<xsl:when test = "$przyczynaKorekty = 'KOREKTA SERII'">
+<xsl:value-of select="count(//ksx:pozycje/ksx:pozycja[ksx:ilosc-przed-kor != 0 and not(ksx:nr-poz-faktury > current()/ksx:nr-poz-faktury)])" />.
+</xsl:when>
+<xsl:otherwise>
+<xsl:value-of select="ksx:nr-poz-faktury" />.
+</xsl:otherwise>
+</xsl:choose>
+</xsl:variable>
+                  <tr>
+                    <td class="position tac">
+                      <xsl:value-of select="$lp" />
+                    </td>
+                    <td class="position tal">
+                      <xsl:call-template name="format-towar">
+                        <xsl:with-param name="towar" select="$towar" />
+                      </xsl:call-template>
+                      <xsl:if test="ksx:wytworca-nazwa != ''">
+                        <br/>
+            Wytwórca: <xsl:value-of select="ksx:wytworca-nazwa" />
+                        <xsl:if test="ksx:wytworca-kraj != ''">, <xsl:value-of select="ksx:wytworca-kraj" />
+                        </xsl:if>
+                      </xsl:if>
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:ilosc-przed-kor" />
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:jednostka-miary" />
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:seria-przed-kor" />
+                      <br/>
+                      <xsl:value-of select="ksx:data-waznosci-przed-kor" />
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:nr-atest" />
+                      <br />
+                      <xsl:value-of select="ksx:data-atest" />
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:cena-netto-przed-kor" />
+                      <br />
+                      <xsl:value-of select="ksx:wartosc-netto-przed-kor" />
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:stawka-vat-przed-kor" />
+                      <br />
+                      <xsl:value-of select="ksx:wartosc-vat-przed-kor" />
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:cena-brutto-przed-kor" />
+                      <br />
+                      <xsl:value-of select="ksx:wartosc-brutto-przed-kor" />
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:upust-przed-kor" />
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:cena-netto-bu-przed-kor" />
+                      <br />
+                      <xsl:value-of select="ksx:cena-brutto-bu-przed-kor" />
+                    </td>
+                    <td class="position tac">
+                      <xsl:choose>
+                        <xsl:when test="ksx:pkwiu-przed-kor != ''">
+                          <xsl:value-of select="ksx:pkwiu-przed-kor" />
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of select="$towar/ksx:pkwiu" />
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:cena-detal-brutto" />
+                    </td>
+                  </tr>
+					</xsl:if>
+                </xsl:for-each>
+              </table>
+              <br/>
+              <b>Jest:</b>
+            </xsl:if>
+
+
+
+
+
+            <table class="data" width="100%">
+              <tr>
+                <td class="header" style="width: 20px;">Lp.</td>
+                <td class="header">Nazwa towaru<br />Kod BLOZ<br />Producent, kraj</td>
+                <td class="header">Ilość</td>
+                <td class="header">Jednostka<br/>miary</td>
+                <td class="header">Seria<br />Data ważności</td>
+                <td class="header">Atest<br />Data atestu</td>
+                <td class="header">Cena netto<br />Wartość netto</td>
+                <td class="header">%VAT<br />Wartość VAT</td>
+                <td class="header">Cena brutto<br />Wartość brutto</td>
+                <td class="header">Upust w %</td>
+                <td class="header">Cena netto przed upustem<br />Cena brutto przed upustem</td>
+                <td class="header">PKWiU</td>
+                <td class="header">Cena detaliczna brutto</td>
+              </tr>
+              <xsl:for-each select="ksx:pozycje/ksx:pozycja">
+                <xsl:variable name="towar" select="//ksx:dokumenty/ksx:towary/ksx:towar[ksx:id-towaru=current()/ksx:id-towaru]"/>
+                <tr>
+                  <td class="position tac">
+                    <xsl:value-of select="ksx:nr-poz-faktury" />.
+                  </td>
+                  <td class="position tal">
+                    <xsl:call-template name="format-towar">
+                      <xsl:with-param name="towar" select="$towar" />
+                    </xsl:call-template>
+                    <xsl:if test="ksx:wytworca-nazwa != ''">
+                      <br/>
+            Wytwórca: <xsl:value-of select="ksx:wytworca-nazwa" />
+                      <xsl:if test="ksx:wytworca-kraj != ''">, <xsl:value-of select="ksx:wytworca-kraj" />
+                      </xsl:if>
+                    </xsl:if>
+                  </td>
+                  <td class="position tar">
+                    <xsl:value-of select="ksx:ilosc" />
+                  </td>
+                  <td class="position tar">
+                    <xsl:value-of select="ksx:jednostka-miary" />
+                  </td>
+                  <td class="position tar">
+                    <xsl:value-of select="ksx:seria" />
+                    <br/>
+                    <xsl:value-of select="ksx:data-waznosci" />
+                  </td>
+                  <td class="position tar">
+                    <xsl:value-of select="ksx:nr-atest" />
+                    <br />
+                    <xsl:value-of select="ksx:data-atest" />
+                  </td>
+                  <td class="position tar">
+                    <xsl:if test="substring(ksx:rodzaj-ceny, 1, 1) = 'N' or substring(ksx:rodzaj-ceny, 1, 1) = 'n'">
+                      <u>
+                        <xsl:value-of select="ksx:cena-netto" />
+                      </u>
+                      <br />
+                    </xsl:if>
+                    <xsl:if test="substring(ksx:rodzaj-ceny, 1, 1) != 'N' and substring(ksx:rodzaj-ceny, 1, 1) != 'n'">
+                      <xsl:value-of select="ksx:cena-netto" />
+                      <br />
+                    </xsl:if>
+                    <xsl:value-of select="ksx:wartosc-netto" />
+                  </td>
+                  <td class="position tar">
+                    <xsl:value-of select="ksx:stawka-vat" />
+                    <br />
+                    <xsl:value-of select="ksx:wartosc-vat" />
+                  </td>
+                  <td class="position tar">
+                    <xsl:if test="substring(ksx:rodzaj-ceny, 1, 1) = 'B' or substring(ksx:rodzaj-ceny, 1, 1) = 'b'">
+                      <u>
+                        <xsl:value-of select="ksx:cena-brutto" />
+                      </u>
+                      <br />
+                    </xsl:if>
+                    <xsl:if test="substring(ksx:rodzaj-ceny, 1, 1) != 'B' and substring(ksx:rodzaj-ceny, 1, 1) != 'b'">
+                      <xsl:value-of select="ksx:cena-brutto" />
+                      <br />
+                    </xsl:if>
+                    <xsl:value-of select="ksx:wartosc-brutto" />
+                  </td>
+                  <td class="position tar">
+                    <xsl:value-of select="ksx:upust" />
+                  </td>
+                  <td class="position tar">
+                    <xsl:value-of select="ksx:cena-netto-bu" />
+                    <br />
+                    <xsl:value-of select="ksx:cena-brutto-bu" />
+                  </td>
+                  <td class="position tac">
+                    <xsl:choose>
+                      <xsl:when test="ksx:pkwiu != ''">
+                        <xsl:value-of select="ksx:pkwiu" />
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:value-of select="$towar/ksx:pkwiu" />
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </td>
+                  <td class="position tar">
+                    <xsl:value-of select="ksx:cena-detal-brutto" />
+                  </td>
+                </tr>
+              </xsl:for-each>
+
+            </table>
+
+
+          </td>
+        </tr>
+        <xsl:if test="//ksx:dokumenty/ksx:faktury/ksx:faktura/ksx:naglowek/ksx:wartosc-netto != ''">
+          <tr>
+            <td class="tar">
+              <table class="data" align="right">
+                <tr>
+                  <td class="header">Stawka VAT</td>
+                  <td class="header">Wartość netto</td>
+                  <td class="header">Wartość VAT</td>
+                  <td class="header">Wartość brutto</td>
+                </tr>
+                <xsl:for-each select="ksx:podsumowanie/ksx:stawki/ksx:stawka">
+                  <tr>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:stawka-vat" />
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:wartosc-netto" />
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:wartosc-vat" />
+                    </td>
+                    <td class="position tar">
+                      <xsl:value-of select="ksx:wartosc-brutto" />
+                    </td>
+                  </tr>
+                </xsl:for-each>
+                <tr>
+                  <td class="tar bold">
+                  Razem:
+                  </td>
+                  <td class="tar bold">
+                    <xsl:value-of select="ksx:naglowek/ksx:wartosc-netto" />
+                  </td>
+                  <td class="tar bold">
+                    <xsl:value-of select="ksx:naglowek/ksx:wartosc-vat" />
+                  </td>
+                  <td class="tar bold">
+                    <xsl:value-of select="ksx:naglowek/ksx:wartosc-brutto" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="position tar bold" colspan="3">
+                  Do zapłaty:
+                  </td>
+                  <td class="position tar bold">
+                    <xsl:value-of select="ksx:naglowek/ksx:wartosc-brutto" />
+                  </td>
+                </tr>
+                <xsl:if test="ksx:naglowek/ksx:wartosc-brutto-slownie != ''">
+                  <tr>
+                    <td class="position tar bold" colspan="4">
+            Słownie: <xsl:value-of select="ksx:naglowek/ksx:wartosc-brutto-slownie" />
+                    </td>
+                  </tr>
+                </xsl:if>
+              </table>
+            </td>
+          </tr>
+        </xsl:if>
+      </table>
+    </xsl:for-each>
+    <p style="text-align:center; margin-top:70px;">Wszelkie prawa dotyczące formatu OSOZ-EDI są zastrzeżone przez <a href="http://www.kamsoft.pl" target="_blank">KAMSOFT SA</a>
+      <br/>Korzystanie z formatu OSOZ-EDI wymaga rejestracji na Portalu KS-EWD oraz spełnienia warunków określonych na stronie <a href="http://www.ks-ewd.pl/osoz-edi" target="_blank">www.ks-ewd.pl/osoz-edi</a>.</p>
+  </xsl:template>
+
+  <xsl:template match="ds:Signature">
+    <p>Dokument podpisany cyfrowo!</p>
+  </xsl:template>
+
+  <xsl:template name="string-replace-all">
+    <xsl:param name="text" />
+    <xsl:param name="replace" />
+    <xsl:param name="by" />
+    <xsl:choose>
+      <xsl:when test="contains($text, $replace)">
+        <xsl:value-of select="substring-before($text,$replace)" />
+        <xsl:value-of select="$by" />
+        <xsl:call-template name="string-replace-all">
+          <xsl:with-param name="text"
+          select="substring-after($text,$replace)" />
+          <xsl:with-param name="replace" select="$replace" />
+          <xsl:with-param name="by" select="$by" />
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$text" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="format-date">
+    <xsl:param name="date" />
+    <xsl:value-of select="substring($date,1,10)" />
+    <xsl:if test="string-length($date) > 10" >
+      <xsl:text> </xsl:text>
+      <xsl:value-of select="substring($date,12,5)" />
+    </xsl:if>
+  </xsl:template>
+
+
+  <xsl:template name="format-dostawca">
+    <xsl:param name="kontrahent" />
+    <b>
+      <a href="http://www.ks-ewd.pl/DistInfo.aspx?nwbr={$kontrahent/ksx:id-knt-ks}" target="_blank">
+        <xsl:value-of select="$kontrahent/ksx:nazwa" />
+      </a>
+      <br/>
+
+      <xsl:choose>
+        <xsl:when test="$kontrahent/ksx:nr-lokalu != ''">
+          <a href="http://maps.google.pl/maps?q={$kontrahent/ksx:miejscowosc}+{$kontrahent/ksx:ulica}+{$kontrahent/ksx:nr-domu}%2F{$kontrahent/ksx:nr-lokalu}" target="_blank">
+            <xsl:value-of select="$kontrahent/ksx:ulica" />
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$kontrahent/ksx:nr-domu" />
+            <xsl:if test="$kontrahent/ksx:nr-lokalu != ''">
+              <xsl:text>/</xsl:text>
+            </xsl:if>
+            <xsl:value-of select="$kontrahent/ksx:nr-lokalu" />
+            <br />
+            <xsl:value-of select="$kontrahent/ksx:kod-pocztowy" />
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$kontrahent/ksx:miejscowosc" />
+          </a>
+        </xsl:when>
+        <xsl:otherwise>
+          <a href="http://maps.google.pl/maps?q={$kontrahent/ksx:miejscowosc}+{$kontrahent/ksx:ulica}+{$kontrahent/ksx:nr-domu}" target="_blank">
+            <xsl:value-of select="$kontrahent/ksx:ulica" />
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$kontrahent/ksx:nr-domu" />
+            <xsl:if test="$kontrahent/ksx:nr-lokalu != ''">
+              <xsl:text>/</xsl:text>
+            </xsl:if>
+            <xsl:value-of select="$kontrahent/ksx:nr-lokalu" />
+            <br />
+            <xsl:value-of select="$kontrahent/ksx:kod-pocztowy" />
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$kontrahent/ksx:miejscowosc" />
+          </a>
+        </xsl:otherwise>
+      </xsl:choose>
+
+    </b>
+    <br/>
+    Id. KAMSOFT: <b>
+      <xsl:value-of select="$kontrahent/ksx:id-knt-ks" />
+    </b>
+    <br/>
+    NIP: <b style="color:#1eb829;">
+      <xsl:value-of select="$kontrahent/ksx:nip" />
+    </b>
+    <br/>
+      Zezwolenie: <b>
+      <xsl:value-of select="$kontrahent/ksx:zezwolenie" />
+    </b>
+    <br/>
+      Tel.: <b>
+      <xsl:value-of select="$kontrahent/ksx:telefon" />
+    </b>
+    <br/>
+      Fax: <b>
+      <xsl:value-of select="$kontrahent/ksx:fax" />
+    </b>
+    <br/>
+    E-mail: <b>
+      <a href="mailto:{$kontrahent/ksx:email}">
+        <xsl:value-of select="$kontrahent/ksx:email" />
+      </a>
+    </b>
+    <xsl:if test="$kontrahent/ksx:bank-nazwa != ''">
+      <br />
+      <i>
+        <b style="color:#3a5aff;">
+          <xsl:value-of select="$kontrahent/ksx:bank-nazwa" />
+        </b>
+      </i>
+    </xsl:if>
+    <xsl:if test="$kontrahent/ksx:bank-nr-konta != ''">
+      <br />
+      <i>
+        <b style="color:#3a5aff;">
+          <xsl:value-of select="$kontrahent/ksx:bank-nr-konta" />
+        </b>
+      </i>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="format-odbiorca">
+    <xsl:param name="kontrahent" />
+    <b>
+      <a href="http://www.osoz.pl/osoz-www/apteki/wizytowka/{$kontrahent/ksx:id-knt-ks}" target="_blank">
+        <xsl:value-of select="$kontrahent/ksx:nazwa" />
+      </a>
+      <br/>
+
+      <xsl:choose>
+        <xsl:when test="$kontrahent/ksx:nr-lokalu != ''">
+          <a href="http://maps.google.pl/maps?q={$kontrahent/ksx:miejscowosc}+{$kontrahent/ksx:ulica}+{$kontrahent/ksx:nr-domu}%2F{$kontrahent/ksx:nr-lokalu}" target="_blank">
+            <xsl:value-of select="$kontrahent/ksx:ulica" />
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$kontrahent/ksx:nr-domu" />
+            <xsl:if test="$kontrahent/ksx:nr-lokalu != ''">
+              <xsl:text>/</xsl:text>
+            </xsl:if>
+            <xsl:value-of select="$kontrahent/ksx:nr-lokalu" />
+            <br />
+            <xsl:value-of select="$kontrahent/ksx:kod-pocztowy" />
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$kontrahent/ksx:miejscowosc" />
+          </a>
+        </xsl:when>
+        <xsl:otherwise>
+          <a href="http://maps.google.pl/maps?q={$kontrahent/ksx:miejscowosc}+{$kontrahent/ksx:ulica}+{$kontrahent/ksx:nr-domu}" target="_blank">
+            <xsl:value-of select="$kontrahent/ksx:ulica" />
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$kontrahent/ksx:nr-domu" />
+            <xsl:if test="$kontrahent/ksx:nr-lokalu != ''">
+              <xsl:text>/</xsl:text>
+            </xsl:if>
+            <xsl:value-of select="$kontrahent/ksx:nr-lokalu" />
+            <br />
+            <xsl:value-of select="$kontrahent/ksx:kod-pocztowy" />
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$kontrahent/ksx:miejscowosc" />
+          </a>
+        </xsl:otherwise>
+      </xsl:choose>
+
+    </b>
+    <br/>
+    Id. KAMSOFT: <b>
+      <xsl:value-of select="$kontrahent/ksx:id-knt-ks" />
+    </b>
+    <br/>
+    NIP: <b style="color:#1eb829;">
+      <xsl:value-of select="$kontrahent/ksx:nip" />
+    </b>
+    <br/>
+      Zezwolenie: <b>
+      <xsl:value-of select="$kontrahent/ksx:zezwolenie" />
+    </b>
+    <br/>
+      Tel.: <b>
+      <xsl:value-of select="$kontrahent/ksx:telefon" />
+    </b>
+    <br/>
+      Fax: <b>
+      <xsl:value-of select="$kontrahent/ksx:fax" />
+    </b>
+    <br/>
+    E-mail: <b>
+      <a href="mailto:{$kontrahent/ksx:email}">
+        <xsl:value-of select="$kontrahent/ksx:email" />
+      </a>
+    </b>
+    <xsl:if test="$kontrahent/ksx:bank-nazwa != ''">
+      <br />
+      <i>
+        <b style="color:#3a5aff;">
+          <xsl:value-of select="$kontrahent/ksx:bank-nazwa" />
+        </b>
+      </i>
+    </xsl:if>
+    <xsl:if test="$kontrahent/ksx:bank-nr-konta != ''">
+      <br />
+      <i>
+        <b style="color:#3a5aff;">
+          <xsl:value-of select="$kontrahent/ksx:bank-nr-konta" />
+        </b>
+      </i>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="format-towar">
+    <xsl:param name="towar" />
+    <xsl:value-of select="$towar/ksx:nazwa" />
+    <xsl:if test="$towar/ksx:postac != ''">
+      <xsl:text>, </xsl:text>
+    </xsl:if>
+    <xsl:value-of select="$towar/ksx:postac" />
+    <xsl:if test="$towar/ksx:dawka != ''">
+      <xsl:text>, </xsl:text>
+    </xsl:if>
+    <xsl:value-of select="$towar/ksx:dawka" />
+    <xsl:if test="$towar/ksx:opakowanie != ''">
+      <xsl:text>, </xsl:text>
+    </xsl:if>
+    <xsl:value-of select="$towar/ksx:opakowanie" />
+    <br />
+    <xsl:if test="$towar/ksx:id-towaru-ks != '' and $towar/ksx:id-towaru-ks != '0'">
+      BLOZ: <a href="http://www.osoz.pl/osoz-www/leki/szczegoly/{$towar/ksx:id-towaru-ks}" target="_blank">
+        <xsl:value-of select="$towar/ksx:id-towaru-ks" />
+      </a>
+      <br />
+    </xsl:if>
+    <xsl:if test="$towar/ksx:podmiot-odpowiedzialny-nazwa != ''">
+         Podmiot odp.: <xsl:value-of select="$towar/ksx:podmiot-odpowiedzialny-nazwa" />
+      <xsl:if test="$towar/ksx:podmiot-odpowiedzialny-kraj != ''">
+        <xsl:text>, </xsl:text>
+      </xsl:if>
+      <xsl:value-of select="$towar/ksx:podmiot-odpowiedzialny-kraj" />
+    </xsl:if>
+  </xsl:template>
+
+</xsl:stylesheet>

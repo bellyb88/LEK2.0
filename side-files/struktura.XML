@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="#"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ksx="http://www.ks-ewd.pl/osoz-edi" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<xsl:output encoding="utf-8" indent="no" method="html"/>
+<dokumenty xmlns="http://www.ks-ewd.pl/osoz-edi">
+  <info>
+    <wersja>2012.01.0.0</wersja>
+    <copyright>Wszelkie prawa dotyczące formatu OSOZ-EDI są zastrzeżone przez KAMSOFT SA Korzystanie z formatu OSOZ-EDI wymaga rejestracji na Portalu KS-EWD oraz spełnienia warunków określonych na stronie www.ks-ewd.pl/osoz-edi.</copyright>
+    <data-utworzenia>2019-11-28T22:57:00</data-utworzenia>
+  </info>
+
+  <kontrahenci>
+    <kontrahent>
+      <nazwa>NEUCA SA</nazwa>
+    </kontrahent>
+    <kontrahent>
+      <nazwa>DZIAŁ FARMACJI SZPITALNEJ DZIAŁ FARMACJI SZPITALNEJ </nazwa>
+    </kontrahent>
+  </kontrahenci>
+
+  <towary>
+    <towar>
+      <id-towaru>44165</id-towaru>
+      <nazwa>ABSENOR 300MG * 100 TABL</nazwa>
+      <id-towaru-ks>8372701</id-towaru-ks>
+    </towar>
+  </towary>
+
+  <konfiguracja>
+  </konfiguracja>
+
+  <faktury>
+    <faktura>
+
+      <naglowek>
+        <nr-faktury>1574749746</nr-faktury>
+      </naglowek>
+
+      <pozycje>
+        <pozycja>
+          <id-poz-faktury>160</id-poz-faktury>
+				<informacje-dodatkowe>
+					<reklamacja-seria-data>3</reklamacja-seria-data>
+				</informacje-dodatkowe>
+        </pozycja>
+      </pozycje>
+
+      <podsumowanie>
+      </podsumowanie>
+
+    </faktura>
+  </faktury>
+
+</dokumenty>
+
+
+</xsl:stylesheet>
