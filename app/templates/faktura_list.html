@@ -1,0 +1,52 @@
+
+{% extends "base_zero.html" %}
+
+{%block zero%}
+{%load static%}
+	<div class="row">
+	<div class="container ">
+
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <th>No.</th>
+          <th>Nr faktury</th>
+          <th>Data wystawienia</th>
+          <th>Data sprzedaży</th>
+          <th>Termin płatności</th>
+          <th>ID sprzedawcy</th>
+          <th>Korekta</th>
+          <th>Netto [PLN]</th>
+          <th>Brutto [PLN]</th>
+          <th>Ilosc leków</th>
+        </thead>
+        <tbody id="myTable">
+          {%for faktura in faktury%}
+          <tr>
+            <td>{{faktura.id}}</td>
+            <td>{{faktura.nr_faktury}}</td>
+            <td>{{faktura.data_wystawienia|date:" d.m.Y"}}</td>
+            <td>{{faktura.data_sprzedazy|date:" d.m.Y"}}</td>
+            <td>{{faktura.termin_platnosci|date:" d.m.Y"}}</td>
+            <td>{{faktura.id_sprzedawcy}}</td>
+            <td>{{faktura.korekta}}</td>
+            <td>{{faktura.wartosc_netto}}</td>
+            <td>{{faktura.wartosc_brutto}}</td>
+            <td>{{faktura.lek_len}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+
+
+	</div>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+		{%endblock%}

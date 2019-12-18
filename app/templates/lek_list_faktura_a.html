@@ -1,0 +1,84 @@
+
+{% extends "base_zero.html" %}
+
+{%block zero%}
+{%load static%}
+
+    <p class="h2 ">Stan Apteka</p>
+	<div class="row">
+	<div class="container-fluid">
+    <div class="table-responsive  p-5">
+      <table class="table table-hover ">
+        <thead>
+
+          <th>ID towaru</th>
+          <th >Nazwa</th>
+          <th>BLOZ</th>
+          <th>Jedn.</th>
+          <th>Seria</th>
+          <th>Data ważności</th>
+          <th>Netto [PLN]</th>
+          <th>Brutto [PLN]</th>
+          <th>PKWiU</th>
+          <th>Kod kreskowy</th>
+          <th class="alert alert-danger">faktura [Nr]</th>
+          <th>Wydaj</th>
+          <th>Ilosc</th>
+        </thead>
+        <tbody id="myTable">
+          {%for obj in leki%}
+          <tr class = "table-active">
+            <td>&nbsp;</td>
+          <td><b> Nr faktury {{obj.faktura_nr_faktury}} </td><td> {{obj.ilosc}} szt. </b></td><td>
+            <div class="col-1">
+            <form class="form-inline " action="{%url 'lek_list_faktura_a' %}" method="post" name="bulk">
+              {% csrf_token %}
+                <input type="text" name="faktura_id" value="{{obj.faktura_id}}" required id="id_faktura_id" class="d-print-none d-none">
+                <input type="text" name="bulk" value="bulk_a" required id="id_bulk" class="d-print-none d-none">
+                <input type="submit" value="Wydaj wszystkie" class="btn m-0 p-1 alert alert-success d-print-none">
+            </form>
+          </div>
+          </td>
+          <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>{{obj.ilosc}} szt.</b> </td>
+          </tr>
+          {%for lek in obj.list%}
+          <tr>
+            <td>{{lek.id_towaru}}</td>
+            <td>{{lek.nazwa}}</td>
+            <td>{{lek.BLOZ}}</td>
+            <td>{{lek.jednostka}}</td>
+            <td>{{lek.seria}}</td>
+            <td>{{lek.data_waznosci|date:" d.m.Y"}}</td>
+            <td>{{lek.cena_netto}}</td>
+            <td>{{lek.cena_brutto}}</td>
+            <td>{{lek.PKWiU}}</td>
+            <td>{{lek.kod_kreskowy}}</td>
+            <td>{{lek.faktura}}</td>
+            <td>
+              <form class="form-inline " action="{%url 'lek_list_faktura_a' %}" method="post">
+              {% csrf_token %}
+              <input type="text" name="id" value="{{lek.id}}" required id="id_id" class="d-print-none d-none">
+              <input type="submit" value="&#8658;" class="btn m-0 p-1 alert alert-primary d-print-none">
+              </form>
+              </td>
+            <td>{{lek.ilosc}}</td>
+          </tr>
+          {%endfor%}
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+
+
+	</div>
+
+	</div>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {%endblock%}
