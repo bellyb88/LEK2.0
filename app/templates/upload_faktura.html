@@ -1,8 +1,12 @@
 
 {% extends "base_zero.html" %}
 
+
+
 {%block zero%}
 {%load static%}
+
+<div class="container p-5">
     <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   {{ form.as_p }}
@@ -16,5 +20,6 @@
         {% endfor %}
     </ul>
     {% endif %}
+  </div>
 
 {%endblock%}
