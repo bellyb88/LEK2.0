@@ -5,15 +5,16 @@ conn = sqlite3.connect('db.sqlite3')
 c = conn.cursor()
 nr_faktur =[]
 leki =[]
-for row in c.execute('SELECT DISTINCT nr_faktury FROM zol_lek'):
+for row in c.execute('SELECT DISTINCT nr_faktury FROM zol_lek WHERE stan="A"'):
     nr_faktur.append(row)
+
 
 
 for i in nr_faktur:
     f =open('%s.xml' % i, 'w+')
     f.write("<dokumenty>\n")
     f.write("<towary>\n")
-    for row in c.execute('SELECT * FROM zol_lek WHERE nr_faktury = %s' % i):
+    for row in c.execute('SELECT * FROM zol_lek WHERE stan="A" AND nr_faktury = %s' % i):
         f.write('<towar>\n')
         f.write('<id-towaru>')
         f.write(str(row.__getitem__(0)))
@@ -39,7 +40,7 @@ for i in nr_faktur:
     f.write('<id-faktury></id-faktury> \n <czy-korekta></czy-korekta> \n <liczba-poz></liczba-poz> \n <wartosc-netto> 0 </wartosc-netto> \n <wartosc-vat></wartosc-vat> \n <wartosc-brutto> 0 </wartosc-brutto> \n <wartosc-brutto-slownie></wartosc-brutto-slownie> \n <id-hrt-p2></id-hrt-p2>\n')
     f.write('</naglowek> \n')
     f.write('<pozycje> \n')
-    for row in c.execute('SELECT * FROM zol_lek WHERE nr_faktury = %s' % i):
+    for row in c.execute('SELECT * FROM zol_lek WHERE stan="A" AND nr_faktury = %s' % i):
         f.write('<pozycja> \n')
         f.write('<id-poz-faktury></id-poz-faktury>\n')
         f.write('<nr-poz-faktury></nr-poz-faktury>\n')
