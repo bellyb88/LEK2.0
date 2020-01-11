@@ -36,6 +36,7 @@ class Lek(models.Model):
     kod_kreskowy = models.BigIntegerField(null=True, blank=True)
     faktura = models.ForeignKey(Faktura, on_delete=models.CASCADE, null=True, blank=True)
     stan = models.CharField(max_length=3,blank=True, choices=(('A','A'),('O', 'O') ))
+    data_wydania = models.DateField(null=True, blank=True)
 
     all = AllManager()
     def __str__(self):

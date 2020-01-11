@@ -21,7 +21,8 @@
           <th>PKWiU</th>
           <th>Kod kreskowy</th>
           <th><a href="{%url 'lek_list_faktura_o' %}" class="text-dark">faktura [Nr]</a> </th>
-          <th>Wydaj</th>
+          <th>Data wydnia</th>
+          <th>Zwróć</th>
           <th>Ilosc</th>
         </thead>
         <tbody id="myTable">
@@ -38,7 +39,7 @@
             </form>
           </div>
           </td>
-          <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>{{obj.ilosc}} szt.</b> </td>
+          <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>{{obj.ilosc}} szt.</b> </td>
           </tr>
           {%for lek in obj.list%}
           <tr>
@@ -53,11 +54,12 @@
             <td>{{lek.PKWiU}}</td>
             <td>{{lek.kod_kreskowy}}</td>
             <td>{{lek.faktura}}</td>
+            <td>{{lek.data_wydania|date:" d.m.Y"}}</td>
             <td>
               <form class="form-inline " action="{%url 'lek_list_nazwa_o' %}" method="post">
               {% csrf_token %}
               <input type="text" name="id" value="{{lek.id}}" required id="id_id" class="d-print-none d-none">
-              <input type="submit" value="&#8658;" class="btn m-0 p-1 alert alert-primary d-print-none">
+              <input type="submit" value="&#8630;" class="btn m-0 p-1 alert alert-primary d-print-none">
               </form>
               </td>
             <td>{{lek.ilosc}}</td>

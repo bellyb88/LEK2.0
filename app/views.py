@@ -7,6 +7,8 @@ from django.views.generic import ListView
 from django.shortcuts import get_object_or_404, redirect
 from django.db.models import Count
 from django.urls import reverse_lazy, reverse
+
+import datetime
 # Create your views here.
 
 
@@ -38,6 +40,7 @@ class LekList_Base(ListView):
             for lek in leki:
                 if lek.stan == 'A':
                     lek.stan = 'O'
+                    lek.data_wydania = datetime.datetime.today().date()
                 elif lek.stan == 'O':
                     lek.stan = 'A'
                 lek.save()
@@ -46,6 +49,7 @@ class LekList_Base(ListView):
             lek = get_object_or_404(Lek, id=id)
             if lek.stan == 'A':
                 lek.stan = 'O'
+                lek.data_wydania = datetime.datetime.today().date()
             elif lek.stan == 'O':
                 lek.stan = 'A'
             lek.save()
