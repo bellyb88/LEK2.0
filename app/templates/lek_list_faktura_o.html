@@ -13,7 +13,7 @@
         <thead>
 
           <th>ID towaru</th>
-            <th> <a href="{%url 'lek_list_nazwa_o' %}" class="text-dark">Nazwa</a> </th>
+            <th class="bg-info"> <a href="{%url 'lek_list_nazwa_o' %}" class="text-dark">Nazwa</a> </th>
           <th>BLOZ</th>
           <th>Jedn.</th>
           <th>Seria</th>
@@ -29,7 +29,7 @@
         </thead>
         <tbody id="myTable">
           {%for obj in leki%}
-          <tr class = "table-active">
+          <tr class = "table-active header">
             <td>&nbsp;</td>
           <td><b> Nr faktury {{obj.faktura_nr_faktury}} </td><td> {{obj.ilosc}} szt. </b></td><td>
             <div class="col-1">
@@ -41,7 +41,7 @@
             </form>
           </div>
           </td>
-          <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>{{obj.ilosc}} szt.</b> </td>
+          <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><span>-</span></td><td><b>{{obj.ilosc}} szt.</b> </td>
           </tr>
           {%for lek in obj.list%}
           <tr>

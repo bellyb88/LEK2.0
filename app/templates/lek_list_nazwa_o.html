@@ -20,14 +20,14 @@
           <th>Brutto [PLN]</th>
           <th>PKWiU</th>
           <th>Kod kreskowy</th>
-          <th><a href="{%url 'lek_list_faktura_o' %}" class="text-dark">faktura [Nr]</a> </th>
+          <th class="bg-info"><a href="{%url 'lek_list_faktura_o' %}" class="text-dark ">faktura [Nr]</a> </th>
           <th>Data wydnia</th>
           <th>Zwróć</th>
           <th>Ilosc</th>
         </thead>
         <tbody id="myTable">
           {%for obj in leki%}
-          <tr class = "table-active">
+          <tr class = "table-active header">
           <td><b>  {{obj.nazwa}} </td><td> {{obj.ilosc}} szt. </b></td><td>
             <div class="col-1">
             <form class="form-inline " action="{%url 'lek_list_nazwa_o' %}" method="post" name="bulk">
@@ -39,7 +39,7 @@
             </form>
           </div>
           </td>
-          <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><b>{{obj.ilosc}} szt.</b> </td>
+          <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><span>-</span></td><td><b>{{obj.ilosc}} szt.</b> </td>
           </tr>
           {%for lek in obj.list%}
           <tr>
