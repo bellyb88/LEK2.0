@@ -12,7 +12,7 @@ import datetime
 # Create your views here.
 
 
-class FakturaList(ListView):
+class Faktura_List(ListView):
     model = Faktura
     fields = '__all__'
     template_name =  'faktura_list.html'
@@ -23,10 +23,20 @@ class FakturaList(ListView):
         context['faktury'] = Faktura.objects.all().order_by('-data_wystawienia').annotate(lek_len=(Count('lek')))
         return context
 
-class LekList_Base(ListView):
+class Lek_List_Base(ListView):
     model = Lek
     fields = '__all__'
 
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['sort'] = self.__class__.__name__[9:-2]
+
+        if self.__class__.__name__[-1] == 'A':
+            context['stan'] = 'A'
+        elif self.__class__.__name__[-1] == 'O':
+            context['stan'] = 'O'
+
+        return context
 
     def post(self, request, *args, **kwargs):
         form = request.POST
@@ -54,50 +64,50 @@ class LekList_Base(ListView):
                 lek.stan = 'A'
             lek.save()
 
-        return redirect(str(self.template_name).partition('.')[0])
+        return redirect(str(self.template_name).lower())
 
 
 
-class LekList_Nazwa_Base(LekList_Base):
+class Lek_List_Nazwa_Base(Lek_List_Base):
     def get_context_data(self,*args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        if self.__class__.__name__ == 'LekList_Nazwa_O':
+        if self.__class__.__name__ == 'Lek_List_Nazwa_O':
             dict = Lek.all.oddzial().values('nazwa').annotate(ilosc=(Count('nazwa')))
-        elif self.__class__.__name__ == 'LekList_Nazwa_A':
+        elif self.__class__.__name__ == 'Lek_List_Nazwa_A':
             dict = Lek.all.apteka().values('nazwa').annotate(ilosc=(Count('nazwa')))
         for j in dict:
             nazwa = j.get('nazwa')
-            if self.__class__.__name__ == 'LekList_Nazwa_A':
+            if self.__class__.__name__ == 'Lek_List_Nazwa_A':
                 list = Lek.all.apteka().filter(nazwa__exact = nazwa)
-            elif self.__class__.__name__ == 'LekList_Nazwa_O':
+            elif self.__class__.__name__ == 'Lek_List_Nazwa_O':
                 list = Lek.all.oddzial().filter(nazwa__exact = nazwa)
             j['list'] = list
         context['leki'] = dict
         return context
 
-class LekList_Nazwa_A(LekList_Nazwa_Base):
-    template_name =  'lek_list_nazwa_a.html'
+class Lek_List_Nazwa_A(Lek_List_Nazwa_Base):
+    template_name =  'lek_list.html'
 
 
-class LekList_Nazwa_O(LekList_Nazwa_Base):
-    template_name =  'lek_list_nazwa_o.html'
+class Lek_List_Nazwa_O(Lek_List_Nazwa_Base):
+    template_name =  'lek_list.html'
 
 
 
-class LekList_Faktura_Base(LekList_Base):
+class Lek_List_Faktura_Base(Lek_List_Base):
     def get_context_data(self,*args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        if self.__class__.__name__ == 'LekList_Faktura_O':
+        if self.__class__.__name__ == 'Lek_List_Faktura_O':
             dict = Lek.all.oddzial().values('faktura_id').annotate(ilosc=(Count('faktura_id')))
-        elif self.__class__.__name__ == 'LekList_Faktura_A':
+        elif self.__class__.__name__ == 'Lek_List_Faktura_A':
             dict = Lek.all.apteka().values('faktura_id').annotate(ilosc=(Count('faktura_id')))
 
         for j in dict:
             faktura_id = j.get('faktura_id')
             faktura_nr_faktury = get_object_or_404(Faktura,id=faktura_id).nr_faktury
-            if self.__class__.__name__ == 'LekList_Faktura_O':
+            if self.__class__.__name__ == 'Lek_List_Faktura_O':
                 list = Lek.all.oddzial().filter(faktura_id__exact = faktura_id)
-            elif self.__class__.__name__ == 'LekList_Faktura_A':
+            elif self.__class__.__name__ == 'Lek_List_Faktura_A':
                 list = Lek.all.apteka().filter(faktura_id__exact = faktura_id)
             j['list'] = list
             j['faktura_nr_faktury']=faktura_nr_faktury
@@ -109,7 +119,6 @@ class LekList_Faktura_Base(LekList_Base):
     def post(self, request, *args, **kwargs):
         form = request.POST
         if form.get('bulk'):
-            print(form)
             faktura_id = form.get('faktura_id')
             if form.get('bulk') == 'bulk_a':
                 leki = Lek.all.apteka().filter(faktura_id__exact = faktura_id).order_by('data_waznosci')
@@ -133,11 +142,11 @@ class LekList_Faktura_Base(LekList_Base):
         return redirect(str(self.template_name).partition('.')[0])
 
 
-class LekList_Faktura_A(LekList_Faktura_Base):
-    template_name =  'lek_list_faktura_a.html'
+class Lek_List_Faktura_A(Lek_List_Faktura_Base):
+    template_name =  'lek_list.html'
 
-class LekList_Faktura_O(LekList_Faktura_Base):
-    template_name =  'lek_list_faktura_o.html'
+class Lek_List_Faktura_O(Lek_List_Faktura_Base):
+    template_name =  'lek_list.html'
 
 
 

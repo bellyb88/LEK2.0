@@ -3,15 +3,25 @@
 
 {%block zero%}
 {%load static%}
+  {%if stan == 'O'%}
+    <p class="h2 ">Stan Oddział</p>
+    {%elif stan == 'A'%}
     <p class="h2 ">Stan Apteka</p>
+    {%endif%}
 	<div class="row">
 	<div class="container-fluid">
     <div class="table-responsive  p-5">
       <table class="table table-hover " style="border-collapse:collapse; max-width:800px;">
         <thead>
           <th>ID towaru</th>
+          {% if sort == 'Nazwa' %}
           <th class="alert alert-danger">Nazwa</th>
-          <th>BLOZ</th>
+          {%elif sort == 'Faktura' and stan == 'A'%}
+          <th class="bg-info"> <a href="{%url 'lek_list_nazwa_a' %}" class="text-dark">Nazwa</a> </th>
+          {%elif sort == 'Faktura' and stan == 'O'%}
+          <th class="bg-info"> <a href="{%url 'lek_list_nazwa_o' %}" class="text-dark">Nazwa</a> </th>
+          {%endif%}
+          <th width="10%">BLOZ</th>
           <th>Jedn.</th>
           <th>Seria</th>
           <th>Data ważności</th>
@@ -19,20 +29,28 @@
           <th>Brutto [PLN]</th>
           <th>PKWiU</th>
           <th>Kod kreskowy</th>
+          {% if sort == 'Nazwa' and stan == 'A' %}
           <th class="bg-info"> <a href="{%url 'lek_list_faktura_a' %}" class="text-dark">faktura [Nr]</a> </th>
+          {% elif sort == 'Nazwa' and stan == 'O' %}
+          <th class="bg-info"> <a href="{%url 'lek_list_faktura_o' %}" class="text-dark">faktura [Nr]</a> </th>
+          {%elif sort == 'Faktura'%}
+          <th  class="alert alert-danger">Faktura</th>
+          {%endif%}
+
           <th>Wydaj</th>
           <th>Ilosc</th>
         </thead>
         <tbody id="myTable">
           {%for obj in leki%}
           <tr class = "table-active header" >
-          <th><b>  {{obj.nazwa}} </th><th> {{obj.ilosc}} szt. </b></th><th>
-            <div class="col-1">
-            <form class="form-inline " action="{%url 'lek_list_nazwa_a' %}" method="post" name="bulk">
+          <th><b>  {{obj.nazwa}} </th><th> {{obj.ilosc}} szt. </b></th>
+          <th width="10%">
+            <div class="col-xs-1">
+            <form class="form " action="{%url 'lek_list_nazwa_a' %}" method="post" name="bulk">
               {% csrf_token %}
-                <input type="text" name="ilosc" id='ilosc' value="" >
-                <input type="text" name="nazwa" value="{{obj.nazwa}}" required id="id_nazwa" class="d-print-none d-none">
-                <input type="text" name="bulk" value="bulk_a" required id="id_bulk" class="d-print-none d-none">
+                <input type="text" name="ilosc" id='ilosc' value="" class="form-control form-control-sm"  >
+                <input type="text" name="nazwa" value="{{obj.nazwa}}" required id="id_nazwa" class="d-print-none d-none" >
+                <input type="text" name="bulk" value="bulk_a" required id="id_bulk" class="d-print-none d-none" >
                 <input type="submit" value="Wydaj" class="btn m-0 p-1 alert alert-success d-print-none">
             </form>
           </div>
