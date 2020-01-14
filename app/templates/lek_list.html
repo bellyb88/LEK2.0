@@ -25,6 +25,9 @@
           <th>Jedn.</th>
           <th>Seria</th>
           <th>Data ważności</th>
+          {%if stan == 'O'%}
+          <th>Data wydania</th>
+          {%endif%}
           <th>Netto [PLN]</th>
           <th>Brutto [PLN]</th>
           <th>PKWiU</th>
@@ -75,16 +78,26 @@
             <td>{{lek.jednostka}}</td>
             <td>{{lek.seria}}</td>
             <td>{{lek.data_waznosci|date:" d.m.Y"}}</td>
+            {%if stan == 'O'%}
+            <td>{{lek.data_wydania|date:" d.m.Y"}}</td>
+            {%endif%}
             <td>{{lek.cena_netto}}</td>
             <td>{{lek.cena_brutto}}</td>
             <td>{{lek.PKWiU}}</td>
             <td>{{lek.kod_kreskowy}}</td>
             <td>{{lek.faktura}}</td>
             <td>
-              <form class="form-inline " action="{%url 'lek_list_nazwa_a' %}" method="post">
-              {% csrf_token %}
+              {%if stan == 'O'%}
+              <form class="form-inline " action="{%url 'lek_list_nazwa_o' %}" method="post">{% csrf_token %}
+              <input type="text" name="id" value="{{lek.id}}" required id="id_id" class="d-print-none d-none">
+              <input type="submit" value="&#8630;" class="btn m-0 p-1 alert alert-primary d-print-none">
+
+
+              {%elif stan == 'A'%}
+              <form class="form-inline " action="{%url 'lek_list_nazwa_a' %}" method="post">{% csrf_token %}
               <input type="text" name="id" value="{{lek.id}}" required id="id_id" class="d-print-none d-none">
               <input type="submit" value="&#8658;" class="btn m-0 p-1 alert alert-primary d-print-none">
+              {%endif%}
               </form>
               </td>
             <td>{{lek.ilosc}}</td>

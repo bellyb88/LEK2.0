@@ -53,8 +53,9 @@ class Lek_List_Base(ListView):
                     lek.data_wydania = datetime.datetime.today().date()
                 elif lek.stan == 'O':
                     lek.stan = 'A'
+                    lek.data_wydania = None
                 lek.save()
-        else:
+        elif form.get('id'):
             id = form.get('id')
             lek = get_object_or_404(Lek, id=id)
             if lek.stan == 'A':
@@ -62,9 +63,10 @@ class Lek_List_Base(ListView):
                 lek.data_wydania = datetime.datetime.today().date()
             elif lek.stan == 'O':
                 lek.stan = 'A'
+                lek.data_wydania = None
             lek.save()
 
-        return redirect(str(self.template_name).lower())
+        return redirect(str(self.__class__.__name__).lower())
 
 
 
