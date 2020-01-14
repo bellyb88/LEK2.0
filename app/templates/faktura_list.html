@@ -24,7 +24,7 @@
         <tbody id="myTable">
           {%for faktura in faktury%}
           <tr>
-            <td>{{faktura.id}}</td>
+            <td>{{forloop.counter}}</td>
             <td>{{faktura.nr_faktury}}</td>
             <td>{{faktura.data_wystawienia|date:" d.m.Y"}}</td>
             <td>{{faktura.data_sprzedazy|date:" d.m.Y"}}</td>

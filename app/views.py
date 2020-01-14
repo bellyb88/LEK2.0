@@ -20,7 +20,7 @@ class FakturaList(ListView):
     def get_context_data(self,*args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
 
-        context['faktury'] = Faktura.objects.all().annotate(lek_len=(Count('lek')))
+        context['faktury'] = Faktura.objects.all().order_by('-data_wystawienia').annotate(lek_len=(Count('lek')))
         return context
 
 class LekList_Base(ListView):
