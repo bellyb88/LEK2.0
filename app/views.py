@@ -65,7 +65,7 @@ class Lek_List_Base(ListView):
                 lek.stan = 'A'
                 lek.data_wydania = None
             lek.save()
-            print('o la boga')
+            
         return redirect(str(self.__class__.__name__).lower())
 
 
