@@ -1,0 +1,89 @@
+
+{% extends "base_zero.html" %}
+
+{%block zero%}
+{%load static%}
+  <p class="h2 p-3 d-print-inline">Leki psychotropowe
+    {%if stan == 'wydane'  %}
+      wydane z apteki od {{data_od}} do {{data_do}}
+    {%endif%}
+
+  </p>
+
+  <div class="input-group col-lg-8 pl-3 d-print-none" >
+    <div class="input-group-prepend">
+      <form class="form " action="{%url 'psychotrop_list' %}" method="post" name="bulk">
+      <span class="input-group-text">Pokaż leki przyjęte od:</span>{% csrf_token %}
+    </div>
+    <input type="text" aria-label="p_data_od" name="p_data_od" id="p_data_od" value="" class="form-control" required>
+    <div class="input-group-prepend">
+      <span class="input-group-text">do:</span>
+    </div>
+    <input type="text" aria-label="p_data_do" name="p_data_do" id="p_data_do" value="" class="form-control" required>
+    <input type="text" name="przyjete" value="przyjete" required id="przyjete" class="d-print-none d-none" >
+    <div class="input-group-prepend">
+      <input type="submit" value="Szukaj" class="btn m-0 p-1 d-print-none">
+    </div>
+    </form>
+</div>
+
+<hr>
+
+
+    <div class="input-group col-lg-8 pl-3 d-print-none" >
+      <div class="input-group-prepend">
+        <form class="form " action="{%url 'psychotrop_list' %}" method="post" name="bulk">
+        <span class="input-group-text">Pokaż leki wydane od:</span>{% csrf_token %}
+      </div>
+      <input type="text" aria-label="w_data_od" name="w_data_od" id="w_data_od" value="" class="form-control" required>
+      <div class="input-group-prepend">
+        <span class="input-group-text">do:</span>
+      </div>
+      <input type="text" aria-label="w_data_do" name="w_data_do" id="w_data_do" value="" class="form-control" required>
+      <input type="text" name="wydane" value="wydane" required id="wydane" class="d-print-none d-none" >
+      <div class="input-group-prepend">
+        <input type="submit" value="Szukaj" class="btn m-0 p-1 d-print-none">
+      </div>
+      </form>
+  </div>
+
+
+	<div class="row col-lg-12">
+	<div class="container-fluid">
+    <div class="table-responsive  p-5 col-lg-12">
+      <table class="table table-hover " style="border-collapse:collapse; max-width:800px;">
+        <thead>
+          <th class="alert alert-danger">Nazwa</th>
+          <th width="10%">BLOZ</th>
+          <th>Jednostka</th>
+
+          <th>Kod kreskowy</th>
+          <th>Ilosc</th>
+        </thead>
+        <tbody id="myTable">
+          {%for obj in leki%}
+          <tr >
+          <th>{{obj.nazwa}} </th>
+          <td>{{obj.BLOZ}}</td>
+          <td>{{obj.jednostka}}</td>
+          <td>{{obj.kod_kreskowy}}</td>
+          <th><b>{{obj.ilosc}} szt.</b> </th>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+
+
+	</div>
+
+	</div>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {%endblock%}

@@ -65,7 +65,7 @@ class Lek_List_Base(ListView):
                 lek.stan = 'A'
                 lek.data_wydania = None
             lek.save()
-            
+
         return redirect(str(self.__class__.__name__).lower())
 
 
@@ -93,6 +93,42 @@ class Lek_List_Nazwa_A(Lek_List_Nazwa_Base):
 
 class Lek_List_Nazwa_O(Lek_List_Nazwa_Base):
     template_name =  'lek_list.html'
+
+
+class Psychotrop_List(ListView):
+    model = Lek
+    fields = '__all__'
+    template_name =  'psychotrop_list.html'
+
+    def get_context_data(self,*args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['leki'] = Lek.all.psychotrop().values('nazwa','BLOZ','kod_kreskowy', 'jednostka').annotate(ilosc=(Count('nazwa')))
+        return context
+
+
+    def post(self, request, *args, **kwargs):
+        form = request.POST
+
+        if form.get('wydane'):
+            data_od = datetime.datetime.strptime(form.get('w_data_od'), '%d-%m-%Y').strftime('%Y-%m-%d')
+            data_do = datetime.datetime.strptime(form.get('w_data_do'), '%d-%m-%Y').strftime('%Y-%m-%d')
+            leki = Lek.all.psychotrop().filter(data_wydania__range = [data_od, data_do]).values('nazwa','BLOZ','kod_kreskowy', 'jednostka').annotate(ilosc=(Count('nazwa')))
+
+            return render(request, 'psychotrop_list.html', {'leki' : leki, 'data_od':form.get('w_data_od'), 'data_do':form.get('w_data_do'), 'stan':'wydane'})
+
+        elif form.get('przyjete'):
+            data_od = datetime.datetime.strptime(form.get('p_data_od'), '%d-%m-%Y').strftime('%Y-%m-%d')
+            data_do = datetime.datetime.strptime(form.get('p_data_do'), '%d-%m-%Y').strftime('%Y-%m-%d')
+            leki = Lek.all.psychotrop().filter(faktura__data_sprzedazy__range = [data_od, data_do]).values('nazwa','BLOZ','kod_kreskowy', 'jednostka').annotate(ilosc=(Count('nazwa')))
+
+            return render(request, 'psychotrop_list.html', {'leki' : leki, 'data_od':form.get('p_data_od'), 'data_do':form.get('p_data_do'), 'stan':'przyjete'})
+
+
+
+
+
+
+
 
 
 

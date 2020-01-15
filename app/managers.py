@@ -8,6 +8,9 @@ class AllQueryset(models.QuerySet):
     def oddzial(self):
         return self.filter(stan__exact = 'O')
 
+    def psychotrop(self):
+        list =[]
+        return self.filter(kod_kreskowy__in = list)
 
 class AllManager(models.Manager):
     def get_queryset(self):
@@ -18,3 +21,6 @@ class AllManager(models.Manager):
 
     def oddzial(self):
         return self.get_queryset().oddzial()
+
+    def psychotrop(self):
+        return self.get_queryset().psychotrop()

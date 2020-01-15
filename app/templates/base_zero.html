@@ -18,13 +18,14 @@
 <div class="p-3 col-lg-8">
 
 
-<a href="{%url 'lek_list_nazwa_a'%}" class="h1 mx-3 text-dark d-inline"><i class="fas fa-pills"></i> <span class="h3 p-0 m-1">Apteka</span> </a>
-<a href="{%url 'lek_list_nazwa_o'%}" class="h1 mx-3 text-dark d-inline"><i class="fas fa-clinic-medical"></i><span class="h3 p-0 m-1">Oddział</span> </a>
-<a href="{%url 'faktura_list'%}" class="h1 mx-3 text-dark d-inline"><i class="far fa-newspaper"></i><span class="h3 p-0 m-1">Faktura</span> </a>
+<a href="{%url 'lek_list_nazwa_a'%}" class="h1 mx-3 text-dark d-inline d-print-none"><i class="fas fa-pills"></i> <span class="h3 p-0 m-1">Apteka</span> </a>
+<a href="{%url 'lek_list_nazwa_o'%}" class="h1 mx-3 text-dark d-inline d-print-none"><i class="fas fa-clinic-medical"></i><span class="h3 p-0 m-1">Oddział</span> </a>
+<a href="{%url 'faktura_list'%}" class="h1 mx-3 text-dark d-inline d-print-none"><i class="far fa-newspaper"></i><span class="h3 p-0 m-1">Faktura</span> </a>
+<a href="{%url 'psychotrop_list'%}" class="h1 mx-3 text-dark d-inline d-print-none"><i class="fas fa-cannabis"></i><span class="h3 p-0 m-1">Psychotropy</span> </a>
 </div>
   <body>
     <div class="col-lg-8">
-    <p class="pt-5 px-4">    <input class="form-control" id="myInput" type="text" placeholder="Search.."> </p>
+    <p class="pt-5 px-4">    <input class="form-control d-print-none" id="myInput" type="text" placeholder="Search.."> </p>
     </div>
 
     {%block zero%}
@@ -42,7 +43,7 @@
 
     $.noConflict();
     jQuery(document).ready(function ($) {
-        $( "#id_data_od, #id_data_do"  ).datepicker({
+        $( "#p_data_od, #p_data_do, #w_data_od, #w_data_do"   ).datepicker({
           dateFormat: 'dd-mm-yy',
           firstDay: 1,
           dayNamesMin: ['Nd','Pon','Wt','Śr','Czw','Pt','Sob'],

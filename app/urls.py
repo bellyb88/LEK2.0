@@ -6,6 +6,8 @@ urlpatterns = [
     path('upload_faktura/', upload_faktura, name='upload_faktura'),
     path('faktura_list/', Faktura_List.as_view(), name='faktura_list'),
 
+    path('psychotrop_list/', Psychotrop_List.as_view(), name='psychotrop_list'),
+
     path('', Lek_List_Nazwa_A.as_view(), name='lek_list_nazwa_a'),
     path('lek_list_nazwa_o/', Lek_List_Nazwa_O.as_view(), name='lek_list_nazwa_o'),
 
