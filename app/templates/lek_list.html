@@ -5,31 +5,7 @@
 {%load static%}
   {%if stan == 'O'%}
     <p class="h2 col-lg-8">Stan Oddział</p>
-    <div class="input-group col-lg-8" >
-      <div class="input-group-prepend">
-        
-        <span class="input-group-text">Pokaż leki wydane od:</span>
-      </div>
-      <input type="text" aria-label="First name" class="form-control">
-      <div class="input-group-prepend">
-        <span class="input-group-text">do:</span>
-      </div>
-      <input type="text" aria-label="Last name" class="form-control">
-      <div class="input-group-prepend">
-        <button class="btn btn-secondary" type="button" id="button-addon1">Szukaj</button>
-      </div>
 
-
-
-        {% csrf_token %}
-          <input type="text" name="ilosc" id='ilosc' value="" class="form-control form-control-sm"  >
-          <input type="text" name="nazwa" value="{{obj.nazwa}}" required id="id_nazwa" class="d-print-none d-none" >
-          <input type="text" name="bulk" value="bulk_a" required id="id_bulk" class="d-print-none d-none" >
-          <input type="submit" value="Wydaj" class="btn m-0 p-1 alert alert-success d-print-none">
-      </form>
-
-
-  </div>
     {%elif stan == 'A'%}
     <p class="h2 col-lg-8">Stan Apteka</p>
     {%endif%}
