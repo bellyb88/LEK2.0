@@ -10,7 +10,7 @@ class AllQueryset(models.QuerySet):
 
     def psychotrop(self):
         list =['05909990166411', '05909990135516','05909990135615','05909990093717','05909990093724',
-        '05909990149513', '05909990149612','05909991271374']
+        '05909990149513', '05909990149612','05909991271374','5909990966127', '5909990966226']
         return self.filter(kod_kreskowy__in = list)
 
 class AllManager(models.Manager):
