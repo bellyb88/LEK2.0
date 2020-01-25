@@ -102,7 +102,7 @@ class Psychotrop_List(ListView):
 
     def get_context_data(self,*args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        context['leki'] = Lek.all.psychotrop().values('nazwa','BLOZ','kod_kreskowy', 'jednostka').annotate(ilosc=(Count('nazwa')))
+        context['leki'] = Lek.all.psychotrop().order_by('nazwa')
         return context
 
 

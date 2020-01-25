@@ -2,6 +2,6 @@
 *~
 __pycache__
 venv/
-db.sqlite3
+
 documents/
 .DS_Store

@@ -51,14 +51,17 @@
 	<div class="row col-lg-12">
 	<div class="container-fluid">
     <div class="table-responsive  p-5 col-lg-12">
-      <table class="table table-hover " style="border-collapse:collapse; max-width:800px;">
+      <table class="table table-hover table-stripped" style="border-collapse:collapse; max-width:800px;">
         <thead>
           <th class="alert alert-danger">Nazwa</th>
           <th width="10%">BLOZ</th>
           <th>Jednostka</th>
-
           <th>Kod kreskowy</th>
-          <th>Ilosc</th>
+          <th>Seria</th>
+          <th>PKWiU</th>
+          <th>nr faktury</th>
+          <th>Data sprzedaży</th>
+          <th>Data wydania</th>
         </thead>
         <tbody id="myTable">
           {%for obj in leki%}
@@ -67,7 +70,12 @@
           <td>{{obj.BLOZ}}</td>
           <td>{{obj.jednostka}}</td>
           <td>{{obj.kod_kreskowy}}</td>
-          <th><b>{{obj.ilosc}} szt.</b> </th>
+          <td>{{obj.seria}}</td>
+          <td>{{obj.PKWiU}}</td>
+          <td>{{obj.faktura.nr_faktury}}</td>
+          <td>{{obj.faktura.data_sprzedazy}}</td>
+          <td>{{obj.data_wydania}}</td>
+          <th> </th>
           </tr>
           {%endfor%}
         </tbody>
