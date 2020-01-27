@@ -73,8 +73,8 @@
           <td>{{obj.seria}}</td>
           <td>{{obj.PKWiU}}</td>
           <td>{{obj.faktura.nr_faktury}}</td>
-          <td>{{obj.faktura.data_sprzedazy}}</td>
-          <td>{{obj.data_wydania}}</td>
+          <td>{{obj.faktura.data_sprzedazy|date:" d.m.Y"}}</td>
+          <td>{{obj.data_wydania|date:" d.m.Y"}}</td>
           <th> </th>
           </tr>
           {%endfor%}
