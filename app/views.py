@@ -66,6 +66,7 @@ class Lek_List_Base(ListView):
                 lek.data_wydania = None
             lek.save()
 
+
         return redirect(str(self.__class__.__name__).lower())
 
 
@@ -86,6 +87,9 @@ class Lek_List_Nazwa_Base(Lek_List_Base):
             j['list'] = list
         context['leki'] = dict
         return context
+
+
+
 
 class Lek_List_Nazwa_A(Lek_List_Nazwa_Base):
     template_name =  'lek_list.html'
