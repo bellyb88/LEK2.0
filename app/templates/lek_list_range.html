@@ -20,7 +20,6 @@
           <th>Seria</th>
           <th>Data ważności</th>
           <th>PKWiU</th>
-          <th>EAN</th>
           <th>Nr faktury</th>
           <th>Data przyjecia</th>
           {%if stan == 'wydanie'%}
@@ -36,7 +35,6 @@
             <td>{{obj.seria}}</td>
             <td>{{obj.data_waznosci|date:" d.m.Y"}}</td>
             <td>{{obj.PKWiU}}</td>
-            <td>{{obj.kod_kreskowy}}</td>
             <td>{{obj.faktura__nr_faktury}}</td>
             <td>{{obj.faktura__data_sprzedazy|date:" d.m.Y"}}</td>
             {%if stan == 'wydanie'%}

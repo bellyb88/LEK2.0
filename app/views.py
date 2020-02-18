@@ -131,7 +131,7 @@ def lek_list_range_a(request):
     data_od =datetime.datetime.strptime(request.POST.get('p_data_od'),'%d-%m-%Y')
     data_do =datetime.datetime.strptime(request.POST.get('p_data_do'),'%d-%m-%Y')
 
-    dict = Lek.all.apteka().filter(faktura__data_sprzedazy__range=[data_od,data_do]).values('nazwa','BLOZ', 'seria', 'data_waznosci', 'PKWiU', 'kod_kreskowy', 'faktura__nr_faktury','faktura__data_sprzedazy').annotate(ilosc=(Count('nazwa')))
+    dict = Lek.all.apteka().filter(faktura__data_sprzedazy__range=[data_od,data_do]).values('nazwa','BLOZ', 'seria', 'data_waznosci', 'PKWiU',  'faktura__nr_faktury','faktura__data_sprzedazy').annotate(ilosc=(Count('nazwa')))
     stan = 'sprzedaz'
     return render(request, 'lek_list_range.html', {'data_od': data_od, 'data_do':data_do, 'dict':dict, 'stan':stan})
 
@@ -141,7 +141,7 @@ def lek_list_range_o(request):
     data_od =datetime.datetime.strptime(request.POST.get('w_data_od'),'%d-%m-%Y')
     data_do =datetime.datetime.strptime(request.POST.get('w_data_do'),'%d-%m-%Y')
 
-    dict = Lek.all.oddzial().filter(data_wydania__range=[data_od,data_do]).values('nazwa','BLOZ', 'seria', 'data_waznosci', 'PKWiU', 'kod_kreskowy', 'faktura__nr_faktury','faktura__data_sprzedazy', 'data_wydania').annotate(ilosc=(Count('nazwa')))
+    dict = Lek.all.oddzial().filter(data_wydania__range=[data_od,data_do]).values('nazwa','BLOZ', 'seria', 'data_waznosci', 'PKWiU', 'faktura__nr_faktury','faktura__data_sprzedazy', 'data_wydania').annotate(ilosc=(Count('nazwa')))
     stan = 'wydanie'
     return render(request, 'lek_list_range.html', {'data_od': data_od, 'data_do':data_do, 'dict':dict, 'stan':stan})
 
