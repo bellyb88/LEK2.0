@@ -1,0 +1,64 @@
+
+{% extends "base_zero.html" %}
+
+{%block zero%}
+{%load static%}
+  {%if stan == 'wydanie'%}
+  <p class="h2 col-lg-8">Leki wydane z apteki od {{data_od|date:" d.m.Y"}} do {{data_do|date:" d.m.Y"}}</p>
+
+    {%elif stan == 'sprzedaz'%}
+    <p class="h2 col-lg-8">Leki przyjete do apteki od {{data_od|date:" d.m.Y"}} do {{data_do|date:" d.m.Y"}}</p>
+
+    {%endif%}
+	<div class="row col-lg-12">
+	<div class="container-fluid">
+    <div class="table-responsive  p-5 col-lg-12">
+      <table class="table table-hover " style="border-collapse:collapse; max-width:800px;">
+        <thead>
+          <th>Nazwa</th>
+          <th>BLOZ</th>
+          <th>Seria</th>
+          <th>Data ważności</th>
+          <th>PKWiU</th>
+          <th>EAN</th>
+          <th>Nr faktury</th>
+          <th>Data przyjecia</th>
+          {%if stan == 'wydanie'%}
+          <th>Data wydania</th>
+          {%endif%}
+          <th>Ilość</th>
+        </thead>
+        <tbody>
+          {%for obj in dict%}
+          <tr>
+            <td>{{obj.nazwa}}</td>
+            <td>{{obj.BLOZ}}</td>
+            <td>{{obj.seria}}</td>
+            <td>{{obj.data_waznosci|date:" d.m.Y"}}</td>
+            <td>{{obj.PKWiU}}</td>
+            <td>{{obj.kod_kreskowy}}</td>
+            <td>{{obj.faktura__nr_faktury}}</td>
+            <td>{{obj.faktura__data_sprzedazy|date:" d.m.Y"}}</td>
+            {%if stan == 'wydanie'%}
+            <td>{{obj.data_wydania|date:" d.m.Y"}}</td>
+            {%endif%}
+            <td>{{obj.ilosc}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+
+
+	</div>
+
+	</div>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {%endblock%}

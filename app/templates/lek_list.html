@@ -8,8 +8,8 @@
 
     <div class="input-group col-lg-8 pl-3 d-print-none" >
       <div class="input-group-prepend">
-        <form class="form " action="{%url 'psychotrop_list' %}" method="post" name="bulk">
-        <span class="input-group-text">Pokaż leki wydane od:</span>{% csrf_token %}
+        <form class="form " action="{%url 'lek_list_range_o'%}" method="post" >{% csrf_token %}
+        <span class="input-group-text">Pokaż leki wydane od:</span>
       </div>
       <input type="text" aria-label="w_data_od" name="w_data_od" id="w_data_od" value="" class="form-control" required>
       <div class="input-group-prepend">
@@ -27,15 +27,14 @@
     <p class="h2 col-lg-8">Stan Apteka</p>
     <div class="input-group col-lg-8 pl-3 d-print-none" >
       <div class="input-group-prepend">
-        <form class="form " action="{%url 'psychotrop_list' %}" method="post" name="bulk">
-        <span class="input-group-text">Pokaż leki przyjęte od:</span>{% csrf_token %}
+        <form class="form " action="{%url 'lek_list_range_a'%}" method="post" >{% csrf_token %}
+        <span class="input-group-text">Pokaż leki przyjęte od:</span>
       </div>
       <input type="text" aria-label="p_data_od" name="p_data_od" id="p_data_od" value="" class="form-control" required>
       <div class="input-group-prepend">
         <span class="input-group-text">do:</span>
       </div>
       <input type="text" aria-label="p_data_do" name="p_data_do" id="p_data_do" value="" class="form-control" required>
-      <input type="text" name="przyjete" value="przyjete" required id="przyjete" class="d-print-none d-none" >
       <div class="input-group-prepend">
         <input type="submit" value="Szukaj" class="btn m-0 p-1 d-print-none">
       </div>
