@@ -1,0 +1,12 @@
+{% load render_table from django_tables2 %}
+<!doctype html>
+<html>
+    <head>
+        <title>Lista leków</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    </head>
+    <body>
+    Całkowity koszt przetargu na 1 rok: {{koszt_calkowity}} zł
+        {% render_table table %}
+    </body>
+</html>

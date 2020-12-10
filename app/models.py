@@ -38,6 +38,7 @@ class Lek(models.Model):
     stan = models.CharField(max_length=3,blank=True, choices=(('A','A'),('O', 'O') ))
     data_wydania = models.DateField(null=True, blank=True)
 
+    objects = models.Manager()
     all = AllManager()
     def __str__(self):
         return self.nazwa

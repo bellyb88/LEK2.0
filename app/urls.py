@@ -17,6 +17,7 @@ urlpatterns = [
     path('lek_list_faktura_a/', Lek_List_Faktura_A.as_view(), name='lek_list_faktura_a'),
     path('lek_list_faktura_o/', Lek_List_Faktura_O.as_view(), name='lek_list_faktura_o'),
     path('lek_list_range_a/', lek_list_range_a, name='lek_list_range_a'),
-    path('lek_list_range_o/', lek_list_range_o, name='lek_list_range_o')
+    path('lek_list_range_o/', lek_list_range_o, name='lek_list_range_o'),
+    path('przetarg/', przetarg, name='przetarg')
 
 ]

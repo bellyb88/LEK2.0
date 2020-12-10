@@ -5,12 +5,26 @@ from .models import *
 from django.contrib import messages
 from django.views.generic import ListView
 from django.shortcuts import get_object_or_404, redirect
-from django.db.models import Count
+from django.db.models import Count, Avg, Max, Min
 from django.urls import reverse_lazy, reverse
-
+from .tables import LekTable
 import datetime
 # Create your views here.
-
+def przetarg(request):
+    leki = Lek.objects.all().filter(faktura__data_sprzedazy__gt=datetime.date(year=2020,month=1, day=1))
+    lista = leki.values('kod_kreskowy').annotate(the_count=Count('kod_kreskowy'))
+    koszt_calkowity = 0
+    for x in lista:
+        cena_brutto = Lek.objects.all().filter(kod_kreskowy = x['kod_kreskowy']).aggregate(Min('cena_brutto'))
+        x['cena_brutto'] = cena_brutto['cena_brutto__min']
+        liczba = float(x['the_count']) * float(x['cena_brutto'])
+        x['calosc_brutto'] = round(liczba,2)
+        koszt_calkowity = koszt_calkowity + round(liczba,2)
+        lek = Lek.objects.all().filter(kod_kreskowy=x['kod_kreskowy'])[0]
+        x['nazwa'] = lek.nazwa
+    table = LekTable(lista)
+    koszt_calkowity = round(koszt_calkowity,2)
+    return render(request, 'przetarg.html', {'table':table, 'koszt_calkowity': koszt_calkowity})
 
 class Faktura_List(ListView):
     model = Faktura
@@ -320,3 +334,5 @@ def upload_faktura(request):
             messages.add_message(request, messages.INFO, 'Faktura wczesniej zaladowana')
 
     return render(request, 'upload_faktura.html', {'form': form})
+
+
